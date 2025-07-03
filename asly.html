@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="bg-[#f3f3f3]">
+    <!-- #region wrapper-->
+    <div class="wrapper w-full ">
+      <!-- #region header-->
+      <div
+        class="header w-full h-[540px] bg-[#2b2b2b] bg-[url(./images2/header/1.png)] bg-center relative"
+      >
+        <div
+          class="header-top w-[80%] h-[160px] bg-white mx-auto rounded-b-[16px] flex items-center justify-between px-[32px]"
+        >
+          <div class="right">
+            <img src="./src/images/header/Logo copy.png" alt="" />
+          </div>
+          <div class="center w-[600px] h-[35px]">
+            <nav
+              class="w-[inherit] h-[inherit] flex justify-between gap-x-[40px]"
+            >
+              <div>
+                <a
+                  href="index.html"
+                  class="font-yekan text-[16px] text-gray-700"
+                  >رزرو خودرو</a
+                >
+              </div>
+              <div>
+                <a href="asly.html" class="font-yekan text-[16px] text-gray-700"
+                  >خدمات ما</a
+                >
+              </div>
+              <div>
+                <a href="#" class="font-yekan text-[16px] text-gray-700"
+                  >بلاگ</a
+                >
+              </div>
+              <div>
+                <a href="pdp.html" class="font-yekan text-[16px] text-gray-700"
+                  >درباره ما</a
+                >
+              </div>
+              <div>
+                <a href="#" class="font-yekan text-[16px] text-gray-700"
+                  >تماس با ما</a
+                >
+              </div>
+              <div>
+                <a href="#" class="font-yekan text-[16px]"
+                  ><img src="./src/images/header/search.png" alt=""
+                /></a>
+              </div>
+            </nav>
+          </div>
+          <div class="left">
+            <a
+              href="#"
+              class="w-[122px] h-[40px] rounded-[8px] gap-x-[8px] bg-[#194BF0] font-yekan flex justify-center items-center text-white"
+              >ورود / ثبت نام</a
+            >
+          </div>
+        </div>
+        <div
+          class="w-[220px] h-[100px] absolute mt-[65px] translate-[-50%] flex gap-x-[24px] text-[32px] text-amber-400 font-yekan"
+        >
+          اُتـــو رِنت؛ سریع، آسان و به صرفه
+        </div>
+        <div
+          class="w-[450px] h-[24px] mt-[130px] absolute translate-[-25%] flex gap-x-[24px]"
+        >
+          <div class="text-[18px] text-[#868686] font-yekan">
+            سرویس دهنده رزرو خودرو در ایران در کمترین زمان ممکن!
+          </div>
+        </div>
+        <div class="mb-[60px]">
+          <button
+            class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-amber-400 text-gray-900 text-[16px] font-yekan mt-[190px] mx-[100px] w-[196px] h-[48px]"
+          >
+            <img src="./src/images2/header/car.png" alt="" />
+            رزرو آسان خودرو
+          </button>
+
+          <button
+            class="btn btn-outline mt-[190px] text-[16px] text-amber-100 w-[151px] h-[48px]"
+          >
+            تماس با ما
+            <img src="./src/images2/header/arrow-left.png" alt="" />
+          </button>
+        </div>
+        <div
+          class="header-bottom w-[90%] h-[250px] bg-white mx-auto rounded-[16px] justify-between px-[34px] py-[30px] border border-accent-content"
+        >
+          <div
+            class="header-bottom-top w-full h-[50px] mb-[20px] flex gap-[20px] justify-between pr-[20px] font-yekan"
+          >
+            <div class="flex gap-[20px]">
+              <p
+                class="bg-[#194BF0] w-[155px] h-[45px] pr-[5px] pt-[10px] justify-center rounded-[20px] border border-b-slate-700 text-amber-50"
+              >
+                اجاره خودرو با راننده
+              </p>
+              <p
+                class="w-[155px] h-[45px] pr-[5px] pt-[10px] justify-center rounded-[20px] border border-b-slate-600 text-gray-900"
+              >
+                اجاره خودرو بی راننده
+              </p>
+              <p
+                class="w-[145px] h-[45px] pr-[5px] pt-[10px] justify-center rounded-[20px] border border-b-slate-600 text-gray-900"
+              >
+                اجاره ماشین عروس
+              </p>
+            </div>
+
+            <div>
+              <h3
+                class="w-[300px] h-[45px] pt-[10px] justify-center rounded-[20px] text-[#194BF0]"
+              >
+                اطلاعات بیشتر در مورد رزرو خودرو
+              </h3>
+            </div>
+          </div>
+          <div
+            class="header-bottom-cen w-full h-[40px] mb-[10px] flex justify-between"
+          >
+            <div class="flex gap-[10px] font-yekan mr-[15px]">
+              <img src="./src/images2/header/aaa.png" class="size-7" alt="" />
+              <p>محل تحویل خودرو</p>
+            </div>
+            <div class="flex gap-[40px] font-yekan mr-[5px]">
+              <div class="gap-[10px] flex">
+                <img src="./src/images2/header/aaa.png" class="size-7" alt="" />
+                <p class="text[14px]">تاریخ تحویل</p>
+              </div>
+              <div class="gap-[10px] flex">
+                <img src="./src/images2/header/aaa.png" class="size-7" alt="" />
+                <p class="text[14px]">تاریخ بازگشت</p>
+              </div>
+              <div class="gap-[10px] flex">
+                <img src="./src/images2/header/aaa.png" class="size-7" alt="" />
+                <p class="text[14px]">ساعت تحویل</p>
+              </div>
+              <div class="gap-[10px] flex">
+                <img src="./src/images2/header/aaa.png" class="size-7" alt="" />
+                <p class="text[14px]">ساعت بازگشت</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="header-bottom-bot w-full h-[60px] mt-[20px] flex justify-between"
+          >
+            <div
+              class="right font-yekan flex justify-between pt-[10px] pr-[15px]"
+            >
+              <select
+                class="select w-full border border-[#9a9a9a] bg-transparent font-yekan text-[16px] text-gray-700"
+              >
+                <option disabled selected>تهران-فرودگاه امام خمینی</option>
+                <option>تهران-فرودگاه امام خمینی</option>
+                <option>تهران-فرودگاه امام خمینی</option>
+                <option>تهران-فرودگاه امام خمینی</option>
+              </select>
+            </div>
+            <div
+              class="left font-yekan flex pt-[10px] w-[800px] mt-[10px] gap-7"
+            >
+              <div class="flex gap-1 text-gray-600 pr-[400px]">
+                <p>1403٫02٫10</p>
+                <img
+                  src="./src/images2/header/Vector.png"
+                  class="size-5"
+                  alt=""
+                />
+              </div>
+              <div class="flex gap-1 text-gray-600">
+                <p>1403٫02٫10</p>
+                <img
+                  src="./src/images2/header/Vector.png"
+                  class="size-5"
+                  alt=""
+                />
+              </div>
+              <div class="flex gap-1 text-gray-600">
+                <p>1403٫02٫10</p>
+                <img
+                  src="./src/images2/header/Vector.png"
+                  class="size-5"
+                  alt=""
+                />
+              </div>
+            </div>
+            <img
+              src="./src/images2/header/Frame 427320815.png"
+              class="h-[100%] w-[60px]"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <!-- #endregion -->
+      <!-- #region eshteb-->
+      <div class="brand w-full h-[200px]"></div>
+      <!-- #endregion -->
+      <!-- #region brands-->
+      <div class="brand w-[95%] h-[100px] flex gap-[20px]">
+        <img src="./src/images2/brands/Marcedes.png" class="opacity-10" />
+        <img src="./src/images2/brands/Nissan (1).png" class="opacity-10" />
+        <img src="./src/images2/brands/lexus-logo.png" class="opacity-10" />
+        <img src="./src/images2/brands/Marcedes.png" class="opacity-10" />
+        <img src="./src/images2/brands/Nissan (1).png" class="opacity-10" />
+        <img src="./src/images2/brands/lexus-logo.png" class="opacity-10" />
+        <img src="./src/images2/brands/Marcedes.png" class="opacity-10" />
+        <img src="./src/images2/brands/Nissan (1).png" class="opacity-10" />
+        <img src="./src/images2/brands/lexus-logo.png" class="opacity-10" />
+        <img src="./src/images2/brands/Marcedes.png" class="opacity-10" />
+      </div>
+      <!-- #endregion -->
+      <!-- #region what-->
+      <div class="w-full mt-[20px]">
+        <div
+          class="w-[80%] h-[290px] bg-[#2b2b2b] bg-[url(./images2/what/1.png)] relative mr-[130px] rounded-[16px]"
+        >
+          <div
+            class="w-[190px] h-[30px] absolute left-[50%] top-[23%] translate-[-50%] flex gap-x-[24px] text-[28px] text-amber-400 font-yekan"
+          >
+            چــــــرا اُتو رِنت؟
+          </div>
+          <div
+            class="w-[860px] h-[100px] absolute left-[50%] top-[60%] translate-[-50%] flex gap-x-[24px]"
+          >
+            <div class="w-full h-[90%] text-[18px] text-[#d9d9d9] font-yekan">
+              اجاره خودرو از یک شرکت اجاره خودرو با سابقه به شما کمک می‌کند تا
+              در مسافرت ها، قرار ملاقات‌ های مهم، مجالس و مراسم‌های خانوادگی
+              ماشین مناسب خود را در اختیار داشته باشید. اگر شما اصلا خودرویی در
+              اختیار ندارید یا خودروی شما مطمئن نیست، می‌توانید از سوییچ، خودروی
+              مناسب خود را کرایه کرده و با آسودگی به سفر بروید.
+            </div>
+          </div>
+          <div
+            class="w-[90%] h-[250px] mx-auto justify-between px-[34px] py-[30px] flex gap-[30px]"
+          >
+            <div
+              class="bg-white w-[300px] h-[90%] rounded-[16px] mt-[190px] font-yekan"
+            >
+              <img
+                src="./src/images2/what/box.png"
+                class="pr-[110px] pt-[10px]"
+                alt=""
+              />
+              <p class="pr-[80px] pt-[10px]">تحویل در محل</p>
+              <p class="pr-[10px] pt-[20px] text-zinc-700 text-[12px]">
+                تحویل خودرو در زمان و مکان توسط شما خواهد بود.
+              </p>
+            </div>
+            <div
+              class="bg-white w-[300px] h-[90%] rounded-[16px] mt-[190px] font-yekan"
+            >
+              <img
+                src="./src/images2/what/box.png"
+                class="pr-[110px] pt-[10px]"
+                alt=""
+              />
+              <p class="pr-[80px] pt-[10px]">تحویل در محل</p>
+              <p class="pr-[10px] pt-[20px] text-zinc-700 text-[12px]">
+                تحویل خودرو در زمان و مکان توسط شما خواهد بود.
+              </p>
+            </div>
+            <div
+              class="bg-white w-[300px] h-[90%] rounded-[16px] mt-[190px] font-yekan"
+            >
+              <img
+                src="./src/images2/what/box.png"
+                class="pr-[110px] pt-[10px]"
+                alt=""
+              />
+              <p class="pr-[80px] pt-[10px]">تحویل در محل</p>
+              <p class="pr-[10px] pt-[20px] text-zinc-700 text-[12px]">
+                تحویل خودرو در زمان و مکان توسط شما خواهد بود.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #endregion -->
+      <!-- #region eshteb-->
+      <div class="brand w-full h-[150px]"></div>
+      <!-- #endregion -->
+      <!-- #region carsss-->
+      <div class="brand w-[80%] h-[200px] gap-[20px] flex mr-[110px]">
+        <img
+          src="./src/images2/carsss/Frame 1430103028.png"
+          class="w-[170px] h-[100px]"
+          alt=""
+        />
+        <img
+          src="./src/images2/carsss/Frame 1430103028.png"
+          alt=""
+          class="w-[170px] h-[100px]"
+        />
+        <img
+          src="./src/images2/carsss/Frame 1430103028.png"
+          alt=""
+          class="w-[170px] h-[100px]"
+        />
+        <img
+          src="./src/images2/carsss/Frame 1430103028.png"
+          alt=""
+          class="w-[170px] h-[100px]"
+        />
+        <img
+          src="./src/images2/carsss/Frame 1430103028.png"
+          alt=""
+          class="w-[170px] h-[100px]"
+        />
+        <img
+          src="./src/images2/carsss/Frame 1430103028.png"
+          alt=""
+          class="w-[170px] h-[100px]"
+        />
+      </div>
+      <!-- #endregion -->
+      <!-- #region text2-->
+      <div class="font-yekan w-ull h-[150px] mr-[550px]">
+        <p class="text-neutral-600 text-[20px] pr-[10px]">
+          مشاهده موجودی خودروها
+        </p>
+        <div class="flex mt-[20px] gap-[10px]">
+          <p class="text-neutral-900 text-[25px] font-bold">رزرو خودرو در</p>
+          <p class="text-amber-400 text-[28px] font-bold">اُتـــورِنت</p>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="right w-[430px] h-[100px]"></div>
+        <div
+          class="center w-[550px] h-[60px] mr-[20px] font-yekan gap-x-[30px] flex"
+        >
+          <div class="bg-[#194BF0] rounded-[8px] w-[138px] h-[48px]">
+            <p class="text-amber-50 pr-[40px] pt-[10px]">پرطرفدار</p>
+          </div>
+          <div class="border border-blue-800 rounded-[8px] w-[138px] h-[48px]">
+            <p class="text-[#194BF0] pr-[40px] pt-[10px]">لوکس</p>
+          </div>
+          <div class="border border-blue-800 rounded-[8px] w-[138px] h-[48px]">
+            <p class="text-[#194BF0] pr-[40px] pt-[10px]">اقتصادی</p>
+          </div>
+        </div>
+        <div class="left w-[300px] h-[60px]">
+          <p class="text-[#194BF0] pr-[140px] pt-[10px] text-[18px] font-bold">
+            مشاهده همه
+          </p>
+        </div>
+      </div>
+      <!-- #endregion -->
+      <!-- #region listcars-->
+      <div class="top-cars w-full">
+        <div
+          class="w-[70%] flex justify-between gap-[30px] my-[30px] mr-[220px]"
+        >
+          <div
+            class="w-1/3 h-[510px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px]"
+          >
+            <div class="w-full">
+              <img src="./src/images/cars/car1.png" class="w-full" alt="" />
+              <div class="w-full">
+                <h3
+                  class="font-yekan font-bold text-[16px] my-[10px] text-[#2b2b2b]"
+                >
+                  سدان E350 اجاره بنز
+                </h3>
+                <span class="font-yekan text-[13px] text-gray-600"
+                  >مدل 2016</span
+                >
+              </div>
+            </div>
+            <div
+              class="w-full bg-[#f3f3f3] p-[6px] mt-[10px] rounded-[8px] mb-[10px]"
+            >
+              <div class="flex justify-between">
+                <div class="flex gap-x-[6px]">
+                  <span class="font-yekan text-[14px] text-gray-700"
+                    >از 1 تا 30 روز:</span
+                  >
+                  <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
+                    8,500,000
+                  </h3>
+                </div>
+                <span class="font-yekan text-[12px] text-gray-700">روزانه</span>
+              </div>
+            </div>
+            <div class="w-full bg-[#f3f3f3] p-[8px] rounded-[8px] mb-[10px]">
+              <div class="flex justify-between">
+                <div class="flex gap-x-[6px]">
+                  <span class="font-yekan text-[14px] text-gray-700"
+                    >از 1 تا 30 روز:</span
+                  >
+                  <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
+                    9,000,000
+                  </h3>
+                </div>
+                <span class="font-yekan text-[12px] text-gray-700">ماهانه</span>
+              </div>
+            </div>
+
+            <div class="w-full flex justify-between p-[10px]">
+              <span class="font-yekan text-gray-600">مبلغ ضمانت:</span>
+              <h4 class="font-yekan text-gray-800">80 میلیون تومان</h4>
+            </div>
+            <div class="w-full">
+              <a
+                href="#"
+                class="block btn btn-primary btn-sm font-yekan text-[16px]"
+                >درخواست رزرو</a
+              >
+            </div>
+          </div>
+          <div
+            class="w-1/3 h-[510px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px]"
+          >
+            <div class="w-full">
+              <img src="./src/images/cars/car2.png" class="w-full" alt="" />
+              <div class="w-full">
+                <h3
+                  class="font-yekan font-bold text-[16px] my-[10px] text-[#2b2b2b]"
+                >
+                  سدان E350 اجاره بنز
+                </h3>
+                <span class="font-yekan text-[13px] text-gray-600"
+                  >مدل 2016</span
+                >
+              </div>
+            </div>
+            <div
+              class="w-full bg-[#f3f3f3] p-[6px] mt-[10px] rounded-[8px] mb-[10px]"
+            >
+              <div class="flex justify-between">
+                <div class="flex gap-x-[6px]">
+                  <span class="font-yekan text-[14px] text-gray-700"
+                    >از 1 تا 30 روز:</span
+                  >
+                  <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
+                    8,500,000
+                  </h3>
+                </div>
+                <span class="font-yekan text-[12px] text-gray-700">روزانه</span>
+              </div>
+            </div>
+            <div class="w-full bg-[#f3f3f3] p-[8px] rounded-[8px] mb-[10px]">
+              <div class="flex justify-between">
+                <div class="flex gap-x-[6px]">
+                  <span class="font-yekan text-[14px] text-gray-700"
+                    >از 1 تا 30 روز:</span
+                  >
+                  <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
+                    9,000,000
+                  </h3>
+                </div>
+                <span class="font-yekan text-[12px] text-gray-700">ماهانه</span>
+              </div>
+            </div>
+
+            <div class="w-full flex justify-between p-[10px]">
+              <span class="font-yekan text-gray-600">مبلغ ضمانت:</span>
+              <h4 class="font-yekan text-gray-800">80 میلیون تومان</h4>
+            </div>
+            <div class="w-full">
+              <a
+                href="#"
+                class="block btn btn-primary btn-sm font-yekan text-[16px]"
+                >درخواست رزرو</a
+              >
+            </div>
+          </div>
+          <div
+            class="w-1/3 h-[510px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px]"
+          >
+            <div class="w-full">
+              <img src="./src/images/cars/car1.png" class="w-full" alt="" />
+              <div class="w-full">
+                <h3
+                  class="font-yekan font-bold text-[16px] my-[10px] text-[#2b2b2b]"
+                >
+                  سدان E350 اجاره بنز
+                </h3>
+                <span class="font-yekan text-[13px] text-gray-600"
+                  >مدل 2016</span
+                >
+              </div>
+            </div>
+            <div
+              class="w-full bg-[#f3f3f3] p-[6px] mt-[10px] rounded-[8px] mb-[10px]"
+            >
+              <div class="flex justify-between">
+                <div class="flex gap-x-[6px]">
+                  <span class="font-yekan text-[14px] text-gray-700"
+                    >از 1 تا 30 روز:</span
+                  >
+                  <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
+                    8,500,000
+                  </h3>
+                </div>
+                <span class="font-yekan text-[12px] text-gray-700">روزانه</span>
+              </div>
+            </div>
+            <div class="w-full bg-[#f3f3f3] p-[8px] rounded-[8px] mb-[10px]">
+              <div class="flex justify-between">
+                <div class="flex gap-x-[6px]">
+                  <span class="font-yekan text-[14px] text-gray-700"
+                    >از 1 تا 30 روز:</span
+                  >
+                  <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
+                    9,000,000
+                  </h3>
+                </div>
+                <span class="font-yekan text-[12px] text-gray-700">ماهانه</span>
+              </div>
+            </div>
+
+            <div class="w-full flex justify-between p-[10px]">
+              <span class="font-yekan text-gray-600">مبلغ ضمانت:</span>
+              <h4 class="font-yekan text-gray-800">80 میلیون تومان</h4>
+            </div>
+            <div class="w-full">
+              <a
+                href="#"
+                class="block btn btn-primary btn-sm font-yekan text-[16px]"
+                >درخواست رزرو</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="w-[70%] flex justify-between gap-[30px] mr-[220px]">
+          <div
+            class="w-1/3 h-[510px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px]"
+          >
+            <div class="w-full">
+              <img src="./src/images/cars/car1.png" class="w-full" alt="" />
+              <div class="w-full">
+                <h3
+                  class="font-yekan font-bold text-[16px] my-[10px] text-[#2b2b2b]"
+                >
+                  سدان E350 اجاره بنز
+                </h3>
+                <span class="font-yekan text-[13px] text-gray-600"
+                  >مدل 2016</span
+                >
+              </div>
+            </div>
+            <div
+              class="w-full bg-[#f3f3f3] p-[6px] mt-[10px] rounded-[8px] mb-[10px]"
+            >
+              <div class="flex justify-between">
+                <div class="flex gap-x-[6px]">
+                  <span class="font-yekan text-[14px] text-gray-700"
+                    >از 1 تا 30 روز:</span
+                  >
+                  <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
+                    8,500,000
+                  </h3>
+                </div>
+                <span class="font-yekan text-[12px] text-gray-700">روزانه</span>
+              </div>
+            </div>
+            <div class="w-full bg-[#f3f3f3] p-[8px] rounded-[8px] mb-[10px]">
+              <div class="flex justify-between">
+                <div class="flex gap-x-[6px]">
+                  <span class="font-yekan text-[14px] text-gray-700"
+                    >از 1 تا 30 روز:</span
+                  >
+                  <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
+                    9,000,000
+                  </h3>
+                </div>
+                <span class="font-yekan text-[12px] text-gray-700">ماهانه</span>
+              </div>
+            </div>
+
+            <div class="w-full flex justify-between p-[10px]">
+              <span class="font-yekan text-gray-600">مبلغ ضمانت:</span>
+              <h4 class="font-yekan text-gray-800">80 میلیون تومان</h4>
+            </div>
+            <div class="w-full">
+              <a
+                href="#"
+                class="block btn btn-primary btn-sm font-yekan text-[16px]"
+                >درخواست رزرو</a
+              >
+            </div>
+          </div>
+          <div
+            class="w-1/3 h-[510px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px]"
+          >
+            <div class="w-full">
+              <img src="./src/images/cars/car2.png" class="w-full" alt="" />
+              <div class="w-full">
+                <h3
+                  class="font-yekan font-bold text-[16px] my-[10px] text-[#2b2b2b]"
+                >
+                  سدان E350 اجاره بنز
+                </h3>
+                <span class="font-yekan text-[13px] text-gray-600"
+                  >مدل 2016</span
+                >
+              </div>
+            </div>
+            <div
+              class="w-full bg-[#f3f3f3] p-[6px] mt-[10px] rounded-[8px] mb-[10px]"
+            >
+              <div class="flex justify-between">
+                <div class="flex gap-x-[6px]">
+                  <span class="font-yekan text-[14px] text-gray-700"
+                    >از 1 تا 30 روز:</span
+                  >
+                  <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
+                    8,500,000
+                  </h3>
+                </div>
+                <span class="font-yekan text-[12px] text-gray-700">روزانه</span>
+              </div>
+            </div>
+            <div class="w-full bg-[#f3f3f3] p-[8px] rounded-[8px] mb-[10px]">
+              <div class="flex justify-between">
+                <div class="flex gap-x-[6px]">
+                  <span class="font-yekan text-[14px] text-gray-700"
+                    >از 1 تا 30 روز:</span
+                  >
+                  <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
+                    9,000,000
+                  </h3>
+                </div>
+                <span class="font-yekan text-[12px] text-gray-700">ماهانه</span>
+              </div>
+            </div>
+
+            <div class="w-full flex justify-between p-[10px]">
+              <span class="font-yekan text-gray-600">مبلغ ضمانت:</span>
+              <h4 class="font-yekan text-gray-800">80 میلیون تومان</h4>
+            </div>
+            <div class="w-full">
+              <a
+                href="#"
+                class="block btn btn-primary btn-sm font-yekan text-[16px]"
+                >درخواست رزرو</a
+              >
+            </div>
+          </div>
+          <div
+            class="w-1/3 h-[510px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px]"
+          >
+            <div class="w-full">
+              <img src="./src/images/cars/car1.png" class="w-full" alt="" />
+              <div class="w-full">
+                <h3
+                  class="font-yekan font-bold text-[16px] my-[10px] text-[#2b2b2b]"
+                >
+                  سدان E350 اجاره بنز
+                </h3>
+                <span class="font-yekan text-[13px] text-gray-600"
+                  >مدل 2016</span
+                >
+              </div>
+            </div>
+            <div
+              class="w-full bg-[#f3f3f3] p-[6px] mt-[10px] rounded-[8px] mb-[10px]"
+            >
+              <div class="flex justify-between">
+                <div class="flex gap-x-[6px]">
+                  <span class="font-yekan text-[14px] text-gray-700"
+                    >از 1 تا 30 روز:</span
+                  >
+                  <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
+                    8,500,000
+                  </h3>
+                </div>
+                <span class="font-yekan text-[12px] text-gray-700">روزانه</span>
+              </div>
+            </div>
+            <div class="w-full bg-[#f3f3f3] p-[8px] rounded-[8px] mb-[10px]">
+              <div class="flex justify-between">
+                <div class="flex gap-x-[6px]">
+                  <span class="font-yekan text-[14px] text-gray-700"
+                    >از 1 تا 30 روز:</span
+                  >
+                  <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
+                    9,000,000
+                  </h3>
+                </div>
+                <span class="font-yekan text-[12px] text-gray-700">ماهانه</span>
+              </div>
+            </div>
+
+            <div class="w-full flex justify-between p-[10px]">
+              <span class="font-yekan text-gray-600">مبلغ ضمانت:</span>
+              <h4 class="font-yekan text-gray-800">80 میلیون تومان</h4>
+            </div>
+            <div class="w-full">
+              <a
+                href="#"
+                class="block btn btn-primary btn-sm font-yekan text-[16px]"
+                >درخواست رزرو</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #endregion -->
+      <!-- #region text3-->
+      <div class="font-yekan w-ull h-[150px] mr-[550px] mt-[20px]">
+        <p class="text-neutral-600 text-[20px] pr-[70px]">چگونه در وبسایت</p>
+        <div class="flex mt-[20px] gap-[10px]">
+          <p class="text-amber-400 text-[28px] font-bold">اُتـــورِنت</p>
+          <p class="text-neutral-900 text-[25px] font-bold">خودرو رزرو کنیم؟</p>
+        </div>
+      </div>
+      <!--#endregion-->
+      <!-- #region bluecar-->
+      <div class="w-full h-[850px] flex pr-[140px]">
+        <div class="right w-[30%] h-full">
+          <div class="top w-[100%] h-[500px]">
+            <div class="one mr-[60px]">
+              <img src="./src/images2/bluecar/1.png" alt="" />
+            </div>
+            <div class="icon mt-[-40px] flex gap-[20px]">
+              <img
+                src="./src/images2/bluecar/Frame 427320959.png"
+                class="w-[80px] h-[80px]"
+                alt=""
+              />
+              <div class="">
+                <div class="flex mt-[20px] gap-[10px] font-yekan">
+                  <p class="text-[#D79C10] text-[22px] font-bold">خودرو</p>
+                  <p class="text-black text-[22px] font-bold">
+                    خود را انتخاب کنید
+                  </p>
+                </div>
+                <p
+                  class="text-[#9f9f9f] text-[14px] font-yekan w-[250px] mt-[5px] font-bold"
+                >
+                  خودروی مورد نظر خود را، متناسب با درخواست خود انتخاب کنید.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bot w-[100%] h-[350px] mt-[40px]">
+            <div class="one mr-[60px]">
+              <img src="./src/images2/bluecar/1.png" alt="" />
+            </div>
+            <div class="icon mt-[-40px] flex gap-[20px]">
+              <img
+                src="./src/images2/bluecar/Frame 427320959.png"
+                class="w-[80px] h-[80px]"
+                alt=""
+              />
+              <div class="">
+                <div class="flex **: gap-[10px] font-yekan">
+                  <p class="text-[#D79C10] text-[22px] font-bold">خودرو</p>
+                  <p class="text-neutral-900 text-[22px] font-bold">
+                    خود را انتخاب کنید
+                  </p>
+                </div>
+                <p
+                  class="text-[#9f9f9f] text-[14px] font-yekan w-[250px] mt-[5px] font-bold"
+                >
+                  خودروی مورد نظر خود را، متناسب با درخواست خود انتخاب کنید.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="center w-[30%] h-full">
+          <img src="./src/images2/bluecar/Frame 1430103013.png" alt="" />
+        </div>
+        <div class="left w-[36%] h-full">
+          <div class="top w-[100%] h-[500px] mr-[40px] mt-[20px]">
+            <img
+              src="./src/images2/bluecar/Screenshot (10).png"
+              class="w-[350px]"
+              alt=""
+            />
+          </div>
+          <div class="bot w-[100%] h-[500px] mr-[40px] mt-[20px]">
+            <img src="./src/images2/bluecar/Screenshot (10).png" alt="" />
+          </div>
+        </div>
+      </div>
+      <!--#endregion-->
+      <!--#region text4-->
+      <div class="font-yekan w-ull h-[150px] mr-[470px] mt-[20px]">
+        <p class="text-neutral-600 text-[20px] pr-[70px]">
+          پر تکرارترین سؤالاتی که پرسیدید
+        </p>
+        <div class="flex mt-[20px] gap-[10px] mr-[130px]">
+          <p class="text-neutral-900 text-[25px] font-bold">سوالات</p>
+          <p class="text-amber-400 text-[28px] font-bold">متداول</p>
+        </div>
+      </div>
+      <!--#endregion-->
+      <!-- #region question -->
+      <div class="w-[100%] h-[400px] flex gap-x-[50px]">
+        <div class="right w-[50%] h-full mr-[150px]">
+          <div
+            tabindex="0"
+            class="collapse collapse-plus bg-base-100 border-base-300 border mb-[30px]"
+          >
+            <div class="collapse-title font-yekan">
+              در صورت بروز نقص فنی برای خودرو چه اتفاقی می افتد؟
+            </div>
+            <div class="collapse-content text-sm">
+              Click the "Sign Up" button in the top right corner and follow the
+              registration process.
+            </div>
+          </div>
+          <div
+            tabindex="0"
+            class="collapse collapse-plus bg-base-100 border-base-300 border mb-[30px]"
+          >
+            <div class="collapse-title font-yekan">
+              هزینه بنزین و کارواش در خودروهای اجاره ای به عهده کیست؟
+            </div>
+            <div class="collapse-content text-sm font-yekan text-gray-700">
+              در زمان اجاره خودرو بدون راننده خودروها کارواش شده و با باک بنزین
+              پر تحویل مشتریان عزیز می گردد. در زمان استرداد خودرو در صورتی که
+              خودرو به کارواش نیاز داشته و یا خودرو دارای کسر سوخت باشد هزینه آن
+              بر عهده مشتری می باشد.
+            </div>
+          </div>
+          <div
+            tabindex="0"
+            class="collapse collapse-plus bg-base-100 border-base-300 border mb-[30px]"
+          >
+            <div class="collapse-title font-yekan">
+              آیا ماشین های اتورنت دارای بیمه هستند؟
+            </div>
+            <div class="collapse-content text-sm">
+              Click the "Sign Up" button in the top right corner and follow the
+              registration process.
+            </div>
+          </div>
+          <div
+            tabindex="0"
+            class="collapse collapse-plus bg-base-100 border-base-300 border mb-[30px]"
+          >
+            <div class="collapse-title font-yekan">
+              محدودیت کیلومتر در اجاره خودرو چقدر می باشد؟
+            </div>
+            <div class="collapse-content text-sm">
+              Click the "Sign Up" button in the top right corner and follow the
+              registration process.
+            </div>
+          </div>
+        </div>
+        <div class="left w-[30%] h-full">
+          <img
+            src="./src/images2/question/Default_A_gentleman_is_showing_a_case_to_a_lady_and_asking_her_0 1.png"
+            class="rounded-[10px] w-[300px] h-[340px]"
+            alt=""
+          />
+        </div>
+      </div>
+      <!--#endregion-->
+      <!--#region text5-->
+      <div class="font-yekan w-ull h-[150px] mr-[470px] mt-[20px]">
+        <p class="text-neutral-600 text-[20px] pr-[70px]">
+          آنچه مشتریان ما درموردمان گفته‌اند.
+        </p>
+        <div class="flex mt-[20px] gap-[10px] mr-[130px]">
+          <p class="text-neutral-900 text-[25px] font-bold">نظرات</p>
+          <p class="text-amber-400 text-[28px] font-bold">مشتریان</p>
+        </div>
+      </div>
+      <!--#endregion-->
+      <!--#region text-6-->
+      <div class="h-[400px] w-full">
+        <div
+          class="h-full w-[70%] bg-white rounded-[10px] border border-slate-400 mr-[200px]"
+        >
+          <div class="h-full w-[65%] mr-[200px]">
+            <img
+              src="./src/images2/question/img.png"
+              class="w-[138px] h-[138px] mr-[210px] mt-[30px]"
+              alt=""
+            />
+            <img
+              src="./src/images2/question/Frame 427321018.png"
+              class="mr-[210px] mt-[20px]"
+              alt=""
+            />
+            <p
+              class="font-yekan text-shadow-neutral-500 text-[14px] w-[450px] mr-[70px] mt-[40px]"
+            >
+              اولین بار بود که برای مسافرت ماشین اجاره می‌کردم و به دنبال یک
+              شرکت با سابقه و مطمئن می‌گشتم!بدون هیچ شکی میگم، اتو رنت تو کار
+              خودش بهترینه!پشتیبانی عالی، هزینه بسیار مناسب، آسان بودن روند
+              اجاره و رزرو؛ هرچی بگم کم گفتم!حتماً دفعه بعد هم برای اجاره ماشین
+              به سراغشون میام.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="h-[100px] w-full mt-[20px]">
+        <div class="h-full w-[70%] mr-[200px] flex gap-[60px]">
+          <div class="w-[200px] h-[80px] rounded-[14px] bg-amber-500 flex">
+            <img
+              src="./src/images2/woman/img (1).png"
+              class="w-[64px] h-[64px] pt-[10px] pr-[10px]"
+              alt=""
+            />
+            <div class="font-yekan mt-[15px] mr-[15px]">
+              <h3>اولدوز بهاور</h3>
+              <p class="text-gray-600 text-[14px]">27 دی ماه 1380</p>
+            </div>
+          </div>
+          <div
+            class="w-[200px] h-[80px] rounded-[14px] bg-white border border-neutral-500 flex"
+          >
+            <img
+              src="./src/images2/woman/img (1).png"
+              class="w-[64px] h-[64px] pt-[10px] pr-[10px]"
+              alt=""
+            />
+            <div class="font-yekan mt-[15px] mr-[15px]">
+              <h3>اولدوز بهاور</h3>
+              <p class="text-gray-600 text-[14px]">27 دی ماه 1380</p>
+            </div>
+          </div>
+          <div
+            class="w-[200px] h-[80px] rounded-[14px] bg-white border border-neutral-500 flex"
+          >
+            <img
+              src="./src/images2/woman/img (1).png"
+              class="w-[64px] h-[64px] pt-[10px] pr-[10px]"
+              alt=""
+            />
+            <div class="font-yekan mt-[15px] mr-[15px]">
+              <h3>اولدوز بهاور</h3>
+              <p class="text-gray-600 text-[14px]">27 دی ماه 1380</p>
+            </div>
+          </div>
+          <div
+            class="w-[200px] h-[80px] rounded-[14px] bg-white border border-neutral-500 flex"
+          >
+            <img
+              src="./src/images2/woman/img (1).png"
+              class="w-[64px] h-[64px] pt-[10px] pr-[10px]"
+              alt=""
+            />
+            <div class="font-yekan mt-[15px] mr-[15px]">
+              <h3>اولدوز بهاور</h3>
+              <p class="text-gray-600 text-[14px]">27 دی ماه 1380</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--#endregion-->
+      <!--#region text5-->
+      <div class="font-yekan w-ull h-[150px] mr-[470px] mt-[20px]">
+        <p class="text-neutral-600 text-[20px] pr-[150px]">مقالات ما</p>
+        <div class="flex mt-[20px] gap-[10px] mr-[130px]">
+          <p class="text-neutral-900 text-[25px] font-bold">مجله</p>
+          <p class="text-amber-400 text-[28px] font-bold">خودرو</p>
+          <div class="font-yekan text-indigo-700 pr-[400px] pt-[5px]">
+            <p>مشاهده همه</p>
+          </div>
+        </div>
+      </div>
+      <!--#endregion-->
+      <!--#region img-->
+      <div class="h-[350px] w-full">
+        <div class="h-full w-[75%] mr-[190px] gap-[30px] flex">
+          <div
+            class="h-full w-[30%] bg-white border border-zinc-500 rounded-[12px]"
+          >
+            <img
+              src="./src/images2/imgcar/pic.png"
+              class="w-[290px] h-[190px] pr-[15px] pt-[20px]"
+              alt=""
+            />
+            <h3 class="font-yekan text-[14px] pt-[10px] pr-[15px]">
+              روش های مختلف برای اجاره خودرو
+            </h3>
+            <p
+              class="font-yekan text-[12px] pt-[10px] pr-[10px] text-stone-500"
+            >
+               امروزه با تغییراتی که در سبک زندگی مردم و شرایط اقتصادی جوامع به
+              وجود آمده است نیازها و نحوه دسترسی به آنها نیز دچار تحولاتی شده
+              است.
+            </p>
+            <div
+              class="font-yekan text-neutral-500 flex gap-[30px] pr-[20px] pt-[20px] text-[13px]"
+            >
+              <div class="flex gap-[5px]">
+                <img src="./src/images2/imgcar/clock.png" alt="" />
+                <p>دقیقه 3</p>
+              </div>
+              <p>1,124</p>
+            </div>
+          </div>
+          <div
+            class="h-full w-[30%] bg-white border border-zinc-500 rounded-[12px]"
+          >
+            <img
+              src="./src/images2/imgcar/pic.png"
+              class="w-[290px] h-[190px] pr-[15px] pt-[20px]"
+              alt=""
+            />
+            <h3 class="font-yekan text-[14px] pt-[10px] pr-[15px]">
+              روش های مختلف برای اجاره خودرو
+            </h3>
+            <p
+              class="font-yekan text-[12px] pt-[10px] pr-[10px] text-stone-500"
+            >
+               امروزه با تغییراتی که در سبک زندگی مردم و شرایط اقتصادی جوامع به
+              وجود آمده است نیازها و نحوه دسترسی به آنها نیز دچار تحولاتی شده
+              است.
+            </p>
+            <div
+              class="font-yekan text-neutral-500 flex gap-[30px] pr-[20px] pt-[20px] text-[13px]"
+            >
+              <div class="flex gap-[5px]">
+                <img src="./src/images2/imgcar/clock.png" alt="" />
+                <p>دقیقه 3</p>
+              </div>
+              <p>1,124</p>
+            </div>
+          </div>
+          <div
+            class="h-full w-[30%] bg-white border border-zinc-500 rounded-[12px]"
+          >
+            <img
+              src="./src/images2/imgcar/pic.png"
+              class="w-[290px] h-[190px] pr-[15px] pt-[20px]"
+              alt=""
+            />
+            <h3 class="font-yekan text-[14px] pt-[10px] pr-[15px]">
+              روش های مختلف برای اجاره خودرو
+            </h3>
+            <p
+              class="font-yekan text-[12px] pt-[10px] pr-[10px] text-stone-500"
+            >
+               امروزه با تغییراتی که در سبک زندگی مردم و شرایط اقتصادی جوامع به
+              وجود آمده است نیازها و نحوه دسترسی به آنها نیز دچار تحولاتی شده
+              است.
+            </p>
+            <div
+              class="font-yekan text-neutral-500 flex gap-[30px] pr-[20px] pt-[20px] text-[13px]"
+            >
+              <div class="flex gap-[5px]">
+                <img src="./src/images2/imgcar/clock.png" alt="" />
+                <p>دقیقه 3</p>
+              </div>
+              <p>1,124</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--#endregion-->
+      <!--#region footer-->
+      <footer
+        class="bg-[#1E1E1EE5] text-gray-200 py-7 w-[80%] rounded-[20px] h-[450px] mr-[130px] mt-[30px] mb-[10px] font-yekan"
+      >
+        <div
+          class="border border-gray-400 rounded-lg p-6 flex items-center w-[85%] mr-[90px] mb-[30px] justify-between"
+        >
+          <tr>
+            <td class="py-5 px-2 flex gap-[120px] items-center">
+              <div class="flex gap-[15px]">
+                <img src="./src/images2/images3/footer/icon.png" alt="" />
+                <div class="font-yekan">
+                  <p class="text-gray-500 pb-[3px]">ارتباط با ما</p>
+                  <p class="text-gray-300">0912-21326545</p>
+                </div>
+              </div>
+              <div class="flex gap-[15px]">
+                <img src="./src/images2/images3/footer/icon.png" alt="" />
+                <div class="font-yekan">
+                  <p class="text-gray-500 pb-[3px]">ارتباط با ما</p>
+                  <p class="text-gray-300">0912-21326545</p>
+                </div>
+              </div>
+              <div class="flex gap-[15px]">
+                <img src="./src/images2/images3/footer/icon.png" alt="" />
+                <div class="font-yekan">
+                  <p class="text-gray-500 pb-[3px]">ارتباط با ما</p>
+                  <p class="text-gray-300">0912-21326545</p>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </div>
+        <div class="container mx-auto px-6 max-w-5xl">
+          <div
+            class="flex flex-col md:flex-row justify-between gap-8 mb-8 mr-[50px]"
+          >
+            <div class="w-[300px]">
+              <img
+                src="./src/images2/images3/footer/Logo (1).png"
+                class="mb-4"
+              />
+              <p class="text-gray-400">
+                اتورنت با رویکرد اعتماد به مشتری، با در اختیار داشتن بزرگترین
+                ناوگان خودرویی متشکل از انواع خودروهای صفر کیلومتر، اقتصادی تا
+                تجاری در سراسر کشور ایران آماده خدمت‌رسانی به مشتریان است.
+              </p>
+            </div>
+            <div class="w-[200px] mt-[20px]">
+              <h3 class="text-xl mb-4">دسترسی آسان</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="hover:text-yellow-400 transition">خانه</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-400 transition"
+                    >درباره ما</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-400 transition">خدمات</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-400 transition"
+                    >تماس با ما</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="w-[320px] ml-[50px] mt-[30px]">
+              <h3 class=" ">خبرنامه</h3>
+
+              <div class="w-full max-w-md mx-auto mt-6">
+                <div
+                  class="flex items-center border border-gray-400 rounded-lg overflow-hidden"
+                >
+                  <input
+                    type="text"
+                    placeholder="ایمیل خود را وارد کنید"
+                    class="w-full px-4 py-2 text-gray-200 focus:outline-none font-yekan text-[14px]"
+                  />
+                  <button class="px-4 py-2 bg-yellow-500 text-black">
+                    ارسال
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="text-center mt-10 pt-4 border-t border-gray-400 text-gray-500 text-sm"
+          >
+            © 2025 Autorent. تمامی حقوق محفوظ است.
+          </div>
+        </div>
+      </footer>
+
+      <!--#region footer-->
+    </div>
+
+    <!-- #endregion -->
+  </body>
+</html>
