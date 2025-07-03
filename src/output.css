@@ -2875,6 +2875,12 @@
   .pr-10 {
     padding-right: calc(var(--spacing) * 10);
   }
+  .pr-\[0px\] {
+    padding-right: 0px;
+  }
+  .pr-\[1\] {
+    padding-right: 1;
+  }
   .pr-\[5px\] {
     padding-right: 5px;
   }
@@ -2899,6 +2905,9 @@
   .pr-\[100px\] {
     padding-right: 100px;
   }
+  .pr-\[110px\] {
+    padding-right: 110px;
+  }
   .pr-\[130px\] {
     padding-right: 130px;
   }
@@ -2911,8 +2920,14 @@
   .pr-\[170px\] {
     padding-right: 170px;
   }
+  .pr-\[190px\] {
+    padding-right: 190px;
+  }
   .pr-\[400px\] {
     padding-right: 400px;
+  }
+  .pr-\[1190px\] {
+    padding-right: 1190px;
   }
   .pb-\[3px\] {
     padding-bottom: 3px;
