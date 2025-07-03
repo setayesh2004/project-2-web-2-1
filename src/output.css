@@ -1719,6 +1719,11 @@
       cursor: not-allowed;
     }
   }
+  .drawer-content {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    min-width: calc(0.25rem * 0);
+  }
   .container {
     width: 100%;
     @media (width >= 340px) {
@@ -1996,6 +2001,9 @@
   }
   .mr-\[160px\] {
     margin-right: 160px;
+  }
+  .mr-\[165px\] {
+    margin-right: 165px;
   }
   .mr-\[170px\] {
     margin-right: 170px;
@@ -2923,6 +2931,9 @@
   .pr-10 {
     padding-right: calc(var(--spacing) * 10);
   }
+  .pr-\[0px\] {
+    padding-right: 0px;
+  }
   .pr-\[5px\] {
     padding-right: 5px;
   }
@@ -2947,8 +2958,14 @@
   .pr-\[90px\] {
     padding-right: 90px;
   }
+  .pr-\[100px\] {
+    padding-right: 100px;
+  }
   .pr-\[110px\] {
     padding-right: 110px;
+  }
+  .pr-\[130px\] {
+    padding-right: 130px;
   }
   .pr-\[140px\] {
     padding-right: 140px;
@@ -2961,6 +2978,9 @@
   }
   .pr-\[400px\] {
     padding-right: 400px;
+  }
+  .pr-\[1000px\] {
+    padding-right: 1000px;
   }
   .pb-\[3px\] {
     padding-bottom: 3px;
@@ -3178,6 +3198,10 @@
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
+  }
+  .ease-out {
+    --tw-ease: var(--ease-out);
+    transition-timing-function: var(--ease-out);
   }
   .btn-outline {
     &:not( .btn-active, :hover, :active:focus, :focus-visible, :disabled, [disabled], .btn-disabled, :checked ) {
