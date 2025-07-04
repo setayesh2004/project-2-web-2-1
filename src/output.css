@@ -43,6 +43,7 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1710,6 +1711,11 @@
       cursor: not-allowed;
     }
   }
+  .drawer-content {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    min-width: calc(0.25rem * 0);
+  }
   .container {
     width: 100%;
     @media (width >= 340px) {
@@ -2326,6 +2332,9 @@
   .w-\[0px\] {
     width: 0px;
   }
+  .w-\[20px\] {
+    width: 20px;
+  }
   .w-\[30\%\] {
     width: 30%;
   }
@@ -2442,6 +2451,9 @@
   }
   .w-\[460px\] {
     width: 460px;
+  }
+  .w-\[480px\] {
+    width: 480px;
   }
   .w-\[500px\] {
     width: 500px;
@@ -2957,6 +2969,9 @@
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
+  .text-\[2px\] {
+    font-size: 2px;
+  }
   .text-\[12px\] {
     font-size: 12px;
   }
@@ -3121,6 +3136,10 @@
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
+  }
+  .ease-out {
+    --tw-ease: var(--ease-out);
+    transition-timing-function: var(--ease-out);
   }
   .btn-outline {
     &:not( .btn-active, :hover, :active:focus, :focus-visible, :disabled, [disabled], .btn-disabled, :checked ) {
