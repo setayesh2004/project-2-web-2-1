@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>هدر ریسپانسیو</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: yekan;
+      }
+    </style>
+  </head>
+  <body dir="rtl">
+    <!-- هدر -->
+    <div
+      class="relative w-full h-[400px] md:h-[540px] bg-[#2b2b2b] bg-cover bg-center bg-[url(./images/header/h.jpg)]"
+    >
+      <div class="absolute inset-0 bg-[#2b2b2b]/60">
+        <!-- منوی بالا -->
+        <div
+          class="w-[90%] md:w-[80%] mx-auto bg-white rounded-b-[16px] p-4 flex flex-col md:flex-row justify-between items-center relative z-40"
+        >
+          <!-- لوگو -->
+          <img
+            src="./src/images/header/Logo copy.png"
+            alt="لوگو"
+            class="mb-4 md:mb-0 w-[100px]"
+          />
+
+          <!-- منوی دسکتاپ -->
+          <nav
+            class="hidden md:flex gap-x-6 text-gray-700 text-sm md:text-base"
+          >
+            <a href="#">رزرو خودرو</a>
+            <a href="#">خدمات ما</a>
+            <a href="#">بلاگ</a>
+            <a href="#">درباره ما</a>
+            <a href="#">تماس با ما</a>
+          </nav>
+
+          <!-- دکمه ورود -->
+          <a
+            href="#"
+            class="bg-blue-600 text-white px-4 py-2 rounded text-sm md:text-base"
+            >ورود / ثبت‌نام</a
+          >
+
+          <!-- دکمه همبرگر موبایل -->
+          <button id="menu-toggle" class="md:hidden absolute left-4 top-4 z-50">
+            <span class="fa fa-align-justify text-gray-400 text-[20px] bg-gray-200 p-2 rounded-md w-[40px] h-[35px]" id="menu-icon" ></span>
+          
+          </button>
+        </div>
+
+        <!-- منوی موبایل -->
+        <div
+          id="mobile-menu"
+          class="hidden flex-col bg-white w-[90%] mx-auto mt-3 rounded p-4 text-sm  md:hidden z-50"
+        >
+          <a href="#" class="py-2 border-b border-b-gray-200 text-shadow-neutral-500">رزرو خودرو</a>
+          <a href="#" class="py-2 border-b  border-b-gray-200 text-shadow-neutral-500">خدمات ما</a>
+          <a href="#" class="py-2 border-b  border-b-gray-200 text-shadow-neutral-500">بلاگ</a>
+          <a href="#" class="py-2 border-b  border-b-gray-200 text-shadow-neutral-500">درباره ما</a>
+          <a href="#" class="py-2">تماس با ما</a>
+        </div>
+
+        <!-- متن وسط هدر -->
+        <div
+          id="header-text"
+          class="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-center z-10"
+        >
+          <h1 class="text-2xl md:text-4xl text-amber-400 font-bold mb-2">
+            اجاره خودرو
+          </h1>
+          <p class="text-sm md:text-base text-[#868686]">
+            اتورنت - لیست خودروهای اجاره‌ای
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- اسکریپت -->
+    <script>
+      const toggleBtn = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const headerText = document.getElementById("header-text");
+
+      toggleBtn.addEventListener("click", () => {
+        const isMenuHidden = mobileMenu.classList.contains("hidden");
+
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+
+        // پنهان یا نمایش دادن متن وسط
+        if (isMenuHidden) {
+          headerText.classList.add("hidden");
+        } else {
+          headerText.classList.remove("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
