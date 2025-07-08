@@ -8,6 +8,10 @@
 
     <link rel="stylesheet" href="./src/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./swiper/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <style>
       html,
       body {
@@ -107,226 +111,282 @@
       }
     </style>
   </head>
-  <body class="bg-[#f3f3f3]">
+  <body class="bg-[#f3f3f3] font-yekan">
     <!--#region wrapper-->
-    <div class="wrapper w-full bg-[#f3f3f3]">
+    <div class="wrapper w-full bg-[#f3f3f3] font-yekan">
       <!--#region header-->
       <div
-        class="header w-full h-[540px] bg-[url(./images/header/h.jpg)] bg-center relative"
+        class="header w-full h-[400px] md:h-[540px] bg-cover bg-[#2b2b2b] bg-[url(./images/header/h.jpg)] bg-center relative"
       >
-        <div class="absolute left-0 top-0 bg-[#2b2b2b]/60 w-full h-full">
-          <!--#region menu-->
+        <div class="absolute inset-0 bg-[#2b2b2b]/60">
+          <!--#region top-menu-->
           <div
-            class="w-[80%] h-[150px] bg-white mx-auto rounded-b-[16px] flex items-center justify-between px-[32px]"
+            class="w-[90%] md:w-[80%] mx-auto bg-white rounded-b-[16px] p-4 flex flex-col md:flex-row justify-between items-center relative z-40 h-[120px]"
           >
-            <div class="right">
-              <img src="./src/images/header/Logo copy.png" alt="" />
+            <div class="logo">
+              <img
+                src="./src/images/header/Logo copy.png"
+                class="mb-4 md:mb-0 w-[100px] md:w-[150px]"
+              />
             </div>
-            <div class="center w-[600px] h-[35px]">
-              <nav
-                class="w-[inherit] h-[inherit] flex justify-between gap-x-[40px]"
-              >
-                <div>
-                  <a
-                    href="index.html"
-                    class="font-yekan text-[18px] text-gray-700"
-                    >رزرو خودرو</a
-                  >
-                </div>
-                <div>
-                  <a
-                    href="asly.html"
-                    class="font-yekan text-[18px] text-gray-700"
-                    >خدمات ما</a
-                  >
-                </div>
-                <div>
-                  <a href="#" class="font-yekan text-[18px] text-gray-700"
-                    >بلاگ</a
-                  >
-                </div>
-                <div>
-                  <a
-                    href="pdp.html"
-                    class="font-yekan text-[18px] text-gray-700"
-                    >درباره ما</a
-                  >
-                </div>
-                <div>
-                  <a href="#" class="font-yekan text-[18px] text-gray-700"
-                    >تماس با ما</a
-                  >
-                </div>
-                <div>
-                  <a href="#" class="font-yekan text-[18px]"
-                    ><img src="./src/images/header/search.png" alt="" />
-                  </a>
-                </div>
-              </nav>
-            </div>
-            <div class="left">
-              <a
-                href="#"
-                class="w-[122px] h-[40px] rounded-[8px] gap-x-[8px] bg-[#194BF0] font-yekan flex justify-center items-center text-white"
-                >ورود / ثبت نام</a
-              >
-            </div>
+            <nav
+              class="hidden md:flex gap-x-8 text-gray-700 text-sm md:text-base"
+            >
+              <div>
+                <a
+                  href="index.html"
+                  class="font-yekan text-[18px] text-gray-700"
+                  >رزرو خودرو</a
+                >
+              </div>
+              <div>
+                <a href="asly.html" class="font-yekan text-[18px] text-gray-700"
+                  >خدمات ما</a
+                >
+              </div>
+              <div>
+                <a href="#" class="font-yekan text-[18px] text-gray-700"
+                  >بلاگ</a
+                >
+              </div>
+              <div>
+                <a href="pdp.html" class="font-yekan text-[18px] text-gray-700"
+                  >درباره ما</a
+                >
+              </div>
+              <div>
+                <a href="#" class="font-yekan text-[18px] text-gray-700"
+                  >تماس با ما</a
+                >
+              </div>
+              <div>
+                <a href="#" class="font-yekan text-[18px]"
+                  ><img src="./src/images/header/search.png" alt=""
+                /></a>
+              </div>
+            </nav>
+            <a
+              href="#"
+              class="bg-blue-600 text-white px-4 py-2 rounded text-sm md:text-base"
+              >ورود / ثبت‌نام</a
+            >
+            <button
+              id="menu-toggle"
+              class="md:hidden absolute left-4 top-4 z-50"
+            >
+              <span
+                class="fa fa-align-justify text-gray-400 text-[20px] bg-gray-200 p-2 rounded-md w-[40px] h-[35px]"
+                id="menu-icon"
+              ></span>
+            </button>
           </div>
+          <!--#region top-menu-mob-->
+          <div
+            id="mobile-menu"
+            class="hidden flex-col bg-white w-[90%] mx-auto mt-3 rounded p-4 text-sm md:hidden z-50"
+          >
+            <a
+              href="#"
+              class="py-2 border-b border-b-gray-200 text-shadow-neutral-500"
+              >رزرو خودرو</a
+            >
+            <a
+              href="#"
+              class="py-2 border-b border-b-gray-200 text-shadow-neutral-500"
+              >خدمات ما</a
+            >
+            <a
+              href="#"
+              class="py-2 border-b border-b-gray-200 text-shadow-neutral-500"
+              >بلاگ</a
+            >
+            <a
+              href="#"
+              class="py-2 border-b border-b-gray-200 text-shadow-neutral-500"
+              >درباره ما</a
+            >
+            <a href="#" class="py-2">تماس با ما</a>
+          </div>
+
           <!--#endregion menu-->
           <!--#region autorent-text-->
           <div
-            class="w-[170px] h-[30px] absolute left-[50%] top-[53%] translate-[-50%] flex gap-x-[24px] text-[32px] text-amber-400 font-yekan mr-[50px]"
+            id="header-text"
+            class="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-center z-10"
           >
-            اجاره خودرو
+            <h1 class="text-2xl md:text-4xl text-amber-400 font-bold mb-2">
+              اجاره خودرو
+            </h1>
+            <p class="text-sm md:text-base text-[#868686]">
+              اتورنت - لیست خودروهای اجاره‌ای
+            </p>
           </div>
 
-          <div
-            class="w-[270px] h-[25px] absolute left-[50%] top-[60%] translate-[-50%] flex gap-x-[24px]"
-          >
-            <div class="text-[18px] text-[#868686] font-yekan">اتورنت</div>
-            <div class="text-[18px] text-[#868686] font-yekan">
-              لیست خودروهای اجاره ای
-            </div>
-          </div>
           <!--#endregion autorent-text-->
         </div>
       </div>
+      <!--#endregion header-->
       <!--#region center-top-1-->
       <div class="w-[60px] h-[50px]"></div>
-
-      <div class="w-full h-[2500px] flex px-[20px] py-[10px] gap-x-10" style="padding-right: 70px; padding-left: 70px;">
+      <div
+        class="w-full md:h-[2500px] md:flex px-[30px] py-[10px] gap-x-10 h-full"
+        style=""
+      >
         <!--#region center-top-1-right -->
-        <div class="center-top-1-right flex flex-col   w-full">
-          <div class="w-[700px] h-[120px] bg-white rounded-[10px] mb-[10px]">
-            <div class="top flex justify-between px-[20px] py-[10px]">
-              <div class="right font-yekan text-[24px] font-bold">
-                <p>بنز s500</p>
+        <div class="center-top-1-right md:flex flex-col w-full">
+          <div
+            class="w-[420px] flex justify-center px-4 py-4 bg-gray-100 md:w-[715px]"
+          >
+            <div class="w-full max-w-[700px] bg-white rounded-[10px] mb-[10px]">
+              <!-- هدر کارت -->
+              <div class="flex justify-between items-center px-4 py-3">
+                <div
+                  class="font-yekan text-[18px] sm:text-[22px] md:text-[24px] font-bold"
+                >
+                  <p>بنز s500</p>
+                </div>
+                <div>
+                  <img
+                    src="./src/images2/images3/star/Rate.png"
+                    class=" "
+                    alt="Star rating icon"
+                  />
+                </div>
               </div>
-              <div class="left">
-                <img
-                  src="./src/images2/images3/star/Rate.png"
-                  class="pt-[5px]"
-                  alt="Rate"
-                />
+
+              <!-- نوار زیر تیتر -->
+              <div class="flex px-4 mb-2">
+                <div class="border-b border-b-amber-500 w-[40px]"></div>
+                <div class="border-b border-b-gray-300 flex-grow ml-2"></div>
               </div>
-            </div>
-            <div class="bord flex mr-[20px]">
-              <div class="y border-b border-b-amber-500 w-[40px]"></div>
-              <div class="g border-b border-b-gray-300 w-[620px]"></div>
-            </div>
-            <div class="bot flex mt-[10px] mr-[17px]">
-              <div
-                class="w-[170px] h-[35px] bg-gray-200 rounded-[10px] ml-[10px] flex pt-[5px] pr-[5px] gap-[5px]"
-              >
-                <input type="checkbox" checked class="checkbox" />
-                <p class="font-yekan text-[12px] text-gray-600 pt-[2px]">
-                  حداقل سن راننده: 25 سال
-                </p>
-              </div>
-              <div
-                class="w-[170px] h-[35px] bg-gray-200 rounded-[10px] ml-[10px] flex pt-[5px] pr-[5px] gap-[5px]"
-              >
-                <input type="checkbox" checked class="checkbox" />
-                <p class="font-yekan text-[12px] text-gray-600 pt-[2px]">
-                  بیمه کامل
-                </p>
-              </div>
-              <div
-                class="w-[170px] h-[35px] bg-gray-200 rounded-[10px] ml-[10px] flex pt-[5px] pr-[5px] gap-[5px]"
-              >
-                <input type="checkbox" checked class="checkbox" />
-                <p class="font-yekan text-[12px] text-gray-600 pt-[2px]">
-                  محدودیت کیلومتر ندارد
-                </p>
+
+              <!-- ویژگی‌ها -->
+              <div class="flex flex-wrap gap-2 px-4 pb-4">
+                <div
+                  class="flex items-center bg-gray-200 rounded-[10px] px-3 py-2 w-full sm:w-auto gap-2"
+                >
+                  <input type="checkbox" checked class="checkbox mr-" />
+                  <p class="font-yekan text-[12px] text-gray-600">
+                    حداقل سن راننده: 25 سال
+                  </p>
+                </div>
+                <div
+                  class="flex items-center bg-gray-200 rounded-[10px] px-3 py-2 w-full sm:w-auto gap-2"
+                >
+                  <input type="checkbox" checked class="checkbox mr-" />
+                  <p class="font-yekan text-[12px] text-gray-600">بیمه کامل</p>
+                </div>
+                <div
+                  class="flex items-center bg-gray-200 rounded-[10px] px-3 py-2 w-full sm:w-auto gap-2"
+                >
+                  <input type="checkbox" checked class="checkbox mr-" />
+                  <p class="font-yekan text-[12px] text-gray-600">
+                    محدودیت کیلومتر ندارد
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="w-[700px] h-[550px] bg-white rounded-[10px] mb-[10px]">
-            <div class="w-[650px] mr-[30px] mt-[20px]">
+          <div class="w-full max-w-[700px] bg-white rounded-[10px] mb-4 p-2">
+            <!-- گالری اصلی -->
+            <div class="w-full">
               <div
                 style="
                   --swiper-navigation-color: #fff;
-
                   --swiper-pagination-color: #fff;
                 "
-                class="swiper mySwiper2"
+                class="swiper mySwiper2 rounded-md overflow-hidden"
               >
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <img
-                      src="./src/images2/images3/cars/a57319fddb7fa7e179d4bce21650400a79e05d18.jpg "
+                      src="./src/images2/images3/cars/a57319fddb7fa7e179d4bce21650400a79e05d18.jpg"
+                      class="w-full h-auto object-cover"
                     />
                   </div>
                   <div class="swiper-slide">
                     <img
                       src="./src/images2/images3/cars/3d20d95fe4ea09c0df38ced0df8bb3b07e247d53.jpg"
+                      class="w-full h-auto object-cover"
                     />
                   </div>
                   <div class="swiper-slide">
                     <img
                       src="./src/images2/images3/cars/7f97d50311b7b71ccf43163fda9b8fa22ecc4b7b.jpg"
+                      class="w-full h-auto object-cover"
                     />
                   </div>
                   <div class="swiper-slide">
                     <img
                       src="./src/images2/images3/cars/920f9651701c17f14183ceac7d287a81e7daad0d.jpg"
+                      class="w-full h-auto object-cover"
                     />
                   </div>
-                  <div class="swiper-slide">
-                    <img
-                      src=" ./src/images2/images3/cars/3b6c43bd021552f9e75651d8e9396c814587fe5f (1).jpg"
-                    />
-                  </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-              </div>
-              <div thumbsSlider="" class="swiper mySwiper">
-                <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <img
                       src="./src/images2/images3/cars/3b6c43bd021552f9e75651d8e9396c814587fe5f (1).jpg"
+                      class="w-full h-auto object-cover"
                     />
                   </div>
-                  <div class="swiper-slide">
+                </div>
+                <!-- دکمه‌های ناوبری -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+
+              <!-- تصاویر کوچک (thumbnail) -->
+              <div thumbsSlider="" class="swiper mySwiper mt-4">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide w-[100px] h-[60px]">
+                    <img
+                      src="./src/images2/images3/cars/3b6c43bd021552f9e75651d8e9396c814587fe5f (1).jpg"
+                      class="w-full h-full object-cover rounded-md"
+                    />
+                  </div>
+                  <div class="swiper-slide w-[100px] h-[60px]">
                     <img
                       src="./src/images2/images3/cars/3d20d95fe4ea09c0df38ced0df8bb3b07e247d53.jpg"
+                      class="w-full h-full object-cover rounded-md"
                     />
                   </div>
-                  <div class="swiper-slide">
+                  <div class="swiper-slide w-[100px] h-[60px]">
                     <img
                       src="./src/images2/images3/cars/7f97d50311b7b71ccf43163fda9b8fa22ecc4b7b.jpg"
+                      class="w-full h-full object-cover rounded-md"
                     />
                   </div>
-                  <div class="swiper-slide">
+                  <div class="swiper-slide w-[100px] h-[60px]">
                     <img
                       src="./src/images2/images3/cars/920f9651701c17f14183ceac7d287a81e7daad0d.jpg"
+                      class="w-full h-full object-cover rounded-md"
                     />
                   </div>
-                  <div class="swiper-slide">
+                  <div class="swiper-slide w-[100px] h-[60px]">
                     <img
                       src="./src/images2/images3/cars/a57319fddb7fa7e179d4bce21650400a79e05d18.jpg"
+                      class="w-full h-full object-cover rounded-md"
                     />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="w-[700px] h-[530px] bg-white rounded-[10px] mb-[10px]">
+          <div
+            class="w-full max-w-[700px] bg-white rounded-[10px] mb-[10px] mx-auto md:h-[570px] h-[340px]"
+          >
             <div
-              class="right font-yekan text-[24px] font-bold pt-[20px] pr-[20px] pb-[15px]"
+              class="text-right font-yekan text-[24px] font-bold pt-[20px] pr-[20px] pb-[15px]"
             >
               <p>پوشش ها</p>
             </div>
             <div class="bord flex mr-[20px]">
               <div class="y border-b border-b-amber-500 w-[40px]"></div>
-              <div class="g border-b border-b-gray-300 w-[620px]"></div>
+              <div class="g border-b border-b-gray-300 flex-1"></div>
             </div>
             <div class="flex mt-[20px] mr-[23px] justify-end items-center">
-              <p></p>
-              <div class="flex ml-[28px] gap-[190px]">
+              <div
+                class="flex md:ml-[88px] gap-[40px] md:gap-[120px] ml-[48px]"
+              >
                 <div class="flex gap-[5px] items-center">
                   <input
                     type="checkbox"
@@ -340,7 +400,7 @@
                     >بیمه پایه</label
                   >
                 </div>
-                <div class="flex gap-[5px] items-center ml-[20px]">
+                <div class="flex gap-[5px] items-center">
                   <input
                     type="checkbox"
                     class="checkbox checkbox-xs"
@@ -354,252 +414,313 @@
                 </div>
               </div>
             </div>
-            <table
-              class="w-[650px] border-collapse bg-white mr-[20px] mt-[20px] font-yekan text-[14px]"
-            >
-              <tbody>
-                <tr class="border-b border-gray-300">
-                  <td class="py-4 px-4">حداکثر تعهد خسارت جزیی</td>
-                  <td class="py-4 px-4 pr-[90px]">250.000.000</td>
-                  <td class="py-4 px-4 pr-[170px]">50,000,000</td>
-                </tr>
-                <tr class="border-b border-gray-300">
-                  <td class="py-4 px-4">حداکثر تعهد خسارت کلی</td>
-                  <td class="py-4 px-4 pr-[90px]">350.000.000</td>
-                  <td class="py-4 px-4 pr-[170px]">40,000,000</td>
-                </tr>
-                <tr class="border-b border-gray-300">
-                  <td class="py-4 px-4">اخذ افت خودرو درتصادف</td>
-                  <td class="py-4 px-4 pr-[90px]">بطور کامل</td>
-                  <td class="py-4 px-4 pr-[170px]">اخذ نمی گردد</td>
-                </tr>
-                <tr class="border-b border-gray-300">
-                  <td class="py-4 px-4">حداکثر تعهد خسارت جزیی</td>
-                  <td class="py-4 px-4 pr-[90px]">250.000.000</td>
-                  <td class="py-4 px-4 pr-[170px]">50,000,000</td>
-                </tr>
-                <tr class="border-b border-gray-300">
-                  <td class="py-4 px-4">حداکثر تعهد خسارت کلی</td>
-                  <td class="py-4 px-4 pr-[90px]">350.000.000</td>
-                  <td class="py-4 px-4 pr-[170px]">40,000,000</td>
-                </tr>
-                <tr class="border-b border-gray-300">
-                  <td class="py-4 px-4">اخذ افت خودرو درتصادف</td>
-                  <td class="py-4 px-4 pr-[90px]">بطور کامل</td>
-                  <td class="py-4 px-4 pr-[170px]">اخذ نمی گردد</td>
-                </tr>
-                <tr class="border-b border-gray-300">
-                  <td class="py-4 px-4">حداکثر تعهد خسارت کلی</td>
-                  <td class="py-4 px-4 pr-[90px]">350.000.000</td>
-                  <td class="py-4 px-4 pr-[170px]">40,000,000</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="mt-[20px] md:mr-[20px]">
+              <table
+                class="w-full border-collapse bg-white text-[8px] md:text-[14px] font-yekan"
+              >
+                <tbody>
+                  <tr class="border-b border-gray-300">
+                    <td class="py-2 md:py-4 px-2">حداکثر تعهد خسارت جزیی</td>
+                    <td class="py-2 md:py-4 px-2 pr-6">250.000.000</td>
+                    <td class="py-2 md:py-4 px-2 pr-6">50,000,000</td>
+                  </tr>
+                  <tr class="border-b border-gray-300">
+                    <td class="py-2 md:py-4 px-2">حداکثر تعهد خسارت کلی</td>
+                    <td class="py-2 md:py-4 px-2 pr-6">350.000.000</td>
+                    <td class="py-2 md:py-4 px-2 pr-6">40,000,000</td>
+                  </tr>
+                  <tr class="border-b border-gray-300">
+                    <td class="py-2 md:py-4 px-2">اخذ افت خودرو درتصادف</td>
+                    <td class="py-2 md:py-4 px-2 pr-6">بطور کامل</td>
+                    <td class="py-2 md:py-4 px-2 pr-6">اخذ نمی گردد</td>
+                  </tr>
+                  <tr class="border-b border-gray-300">
+                    <td class="py-2 md:py-4 px-2">حداکثر تعهد خسارت جزیی</td>
+                    <td class="py-2 md:py-4 px-2 pr-6">250.000.000</td>
+                    <td class="py-2 md:py-4 px-2 pr-6">50,000,000</td>
+                  </tr>
+                  <tr class="border-b border-gray-300">
+                    <td class="py-2 md:py-4 px-2">حداکثر تعهد خسارت کلی</td>
+                    <td class="py-2 md:py-4 px-2 pr-6">350.000.000</td>
+                    <td class="py-2 md:py-4 px-2 pr-6">40,000,000</td>
+                  </tr>
+                  <tr class="border-b border-gray-300">
+                    <td class="py-2 md:py-4 px-2">اخذ افت خودرو درتصادف</td>
+                    <td class="py-2 md:py-4 px-2 pr-6">بطور کامل</td>
+                    <td class="py-2 md:py-4 px-2 pr-6">اخذ نمی گردد</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2 md:py-4 px-2">حداکثر تعهد خسارت کلی</td>
+                    <td class="py-2 md:py-4 px-2 pr-6">350.000.000</td>
+                    <td class="py-2 md:py-4 px-2 pr-6">40,000,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-          <div class="w-[700px] h-[260px] bg-white rounded-[10px] mb-[10px]">
+
+          <div
+            class="w-full max-w-[700px] bg-white rounded-[10px] mb-4 mx-auto p-4"
+          >
             <div
-              class="right font-yekan text-[24px] font-bold pt-[20px] pr-[20px] pb-[15px]"
+              class="text-right font-yekan text-[16px] md:text-3xl font-bold mb-4"
             >
               <p>مشخصات</p>
             </div>
-            <div class="bord flex mr-[20px]">
-              <div class="y border-b border-b-amber-500 w-[40px]"></div>
-              <div class="g border-b border-b-gray-300 w-[620px]"></div>
+            <div class="flex mb-4">
+              <div class="border-b border-b-amber-500 w-10"></div>
+              <div class="border-b border-b-gray-300 flex-1"></div>
             </div>
 
-            <table
-              class="w-[650px] bg-white mr-[20px] mt-[20px] font-yekan text-[14px]"
-            >
-              <tbody>
-                <tr>
-                  <td class="py-5 px-2 flex gap-[120px] items-center">
-                    <div class="flex gap-[10px]">
-                      <img
-                        src="./src/images2/images3/mosha/Frame 1430102805.png"
-                        alt=""
-                      />
-                      <div class="font-yekan">
-                        <p class="text-gray-700">مسافت پیموده</p>
-                        <p class="text-gray-300">۱۲ کیلومتر</p>
-                      </div>
-                    </div>
-                    <div class="flex gap-[10px]">
-                      <img
-                        src="./src/images2/images3/mosha/Frame 1430102811.png"
-                        alt=""
-                      />
-                      <div class="font-yekan">
-                        <p class="text-gray-700">نوع دنده</p>
-                        <p class="text-gray-300">اتوماتیک</p>
-                      </div>
-                    </div>
-                    <div class="flex gap-[10px]">
-                      <img
-                        src="./src/images2/images3/mosha/Frame 1430102810.png"
-                        alt=""
-                      />
-                      <div class="font-yekan">
-                        <p class="text-gray-700">سوخت استفاده شده</p>
-                        <p class="text-gray-300">بنزین</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="py-5 px-2 flex gap-[120px] items-center">
-                    <div class="flex gap-[10px]">
-                      <img
-                        src="./src/images2/images3/mosha/Frame 1430102805.png"
-                        alt=""
-                      />
-                      <div class="font-yekan">
-                        <p class="text-gray-700">مسافت پیموده</p>
-                        <p class="text-gray-300">۱۲ کیلومتر</p>
-                      </div>
-                    </div>
-                    <div class="flex gap-[10px]">
-                      <img
-                        src="./src/images2/images3/mosha/Frame 1430102811.png"
-                        alt=""
-                      />
-                      <div class="font-yekan">
-                        <p class="text-gray-700">نوع دنده</p>
-                        <p class="text-gray-300">اتوماتیک</p>
-                      </div>
-                    </div>
-                    <div class="flex gap-[10px]">
-                      <img
-                        src="./src/images2/images3/mosha/Frame 1430102810.png"
-                        alt=""
-                      />
-                      <div class="font-yekan">
-                        <p class="text-gray-700">سوخت استفاده شده</p>
-                        <p class="text-gray-300">بنزین</p>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <!-- ردیف اول -->
+            <div class="flex justify-between gap-6 mb-6">
+              <div class="flex items-center gap-3 w-[32%] min-w-[110px]">
+                <img
+                  src="./src/images2/images3/mosha/Frame 1430102805.png"
+                  alt="مسافت پیموده"
+                  class="w-6 h-6 md:w-8 md:h-8"
+                />
+                <div>
+                  <p class="text-gray-700 font-yekan text-[12px] md:text-base">
+                    مسافت پیموده
+                  </p>
+                  <p class="text-gray-400 font-yekan text-[10px] md:text-sm">
+                    ۱۲ کیلومتر
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 w-[32%] min-w-[110px]">
+                <img
+                  src="./src/images2/images3/mosha/Frame 1430102811.png"
+                  alt="نوع دنده"
+                  class="w-6 h-6 md:w-8 md:h-8"
+                />
+                <div>
+                  <p class="text-gray-700 font-yekan text-[12px] md:text-base">
+                    نوع دنده
+                  </p>
+                  <p class="text-gray-400 font-yekan text-[10px] md:text-sm">
+                    اتوماتیک
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 w-[32%] min-w-[110px]">
+                <img
+                  src="./src/images2/images3/mosha/Frame 1430102810.png"
+                  alt="سوخت استفاده شده"
+                  class="w-6 h-6 md:w-8 md:h-8"
+                />
+                <div>
+                  <p class="text-gray-700 font-yekan text-[12px] md:text-base">
+                    سوخت مصرفی
+                  </p>
+                  <p class="text-gray-400 font-yekan text-[10px] md:text-sm">
+                    بنزین
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ردیف دوم -->
+            <div class="flex justify-between gap-6">
+              <div class="flex items-center gap-3 w-[32%] min-w-[110px]">
+                <img
+                  src="./src/images2/images3/mosha/Frame 1430102805.png"
+                  alt="مسافت پیموده"
+                  class="w-6 h-6 md:w-8 md:h-8"
+                />
+                <div>
+                  <p class="text-gray-700 font-yekan text-[12px] md:text-base">
+                    مسافت پیموده
+                  </p>
+                  <p class="text-gray-400 font-yekan text-[10px] md:text-sm">
+                    ۱۲ کیلومتر
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 w-[32%] min-w-[110px]">
+                <img
+                  src="./src/images2/images3/mosha/Frame 1430102811.png"
+                  alt="نوع دنده"
+                  class="w-6 h-6 md:w-8 md:h-8"
+                />
+                <div>
+                  <p class="text-gray-700 font-yekan text-[12px] md:text-base">
+                    نوع دنده
+                  </p>
+                  <p class="text-gray-400 font-yekan text-[10px] md:text-sm">
+                    اتوماتیک
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 w-[32%] min-w-[110px]">
+                <img
+                  src="./src/images2/images3/mosha/Frame 1430102810.png"
+                  alt="سوخت استفاده شده"
+                  class="w-6 h-6 md:w-8 md:h-8"
+                />
+                <div>
+                  <p class="text-gray-700 font-yekan text-[12px] md:text-base">
+                    سوخت مصرفی
+                  </p>
+                  <p class="text-gray-400 font-yekan text-[10px] md:text-sm">
+                    بنزین
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="w-[700px] h-[260px] bg-white rounded-[10px] mb-[10px]">
+
+          <div
+            class="w-full max-w-[700px] bg-white rounded-[10px] mb-4 mx-auto p-4"
+          >
             <div
-              class="right font-yekan text-[24px] font-bold pt-[20px] pr-[20px] pb-[15px]"
+              class="text-right font-yekan text-[16px] md:text-3xl font-bold mb-4"
             >
               <p>امکانات</p>
             </div>
-            <div class="bord flex mr-[20px]">
-              <div class="y border-b border-b-amber-500 w-[40px]"></div>
-              <div class="g border-b border-b-gray-300 w-[620px]"></div>
+            <div class="flex mb-4">
+              <div class="border-b border-b-amber-500 w-10"></div>
+              <div class="border-b border-b-gray-300 flex-1"></div>
             </div>
 
-            <table
-              class="w-[650px] bg-white mr-[20px] mt-[20px] font-yekan text-[14px]"
-            >
-              <tbody>
-                <tr>
-                  <td class="py-5 px-2 flex gap-[120px] items-center">
-                    <div class="flex gap-[10px]">
-                      <img
-                        src="./src/images2/images3/mosha/Frame 1430102808.png"
-                        alt=""
-                      />
-                      <div class="font-yekan">
-                        <p class="text-gray-700">گرمکن صندلی</p>
-                      </div>
-                    </div>
-                    <div class="flex gap-[10px]">
-                      <img
-                        src="./src/images2/images3/mosha/Frame 1430102808.png"
-                        alt=""
-                      />
-                      <div class="font-yekan">
-                        <p class="text-gray-700">گیربکس 7 سرعته اتوماتیک</p>
-                      </div>
-                    </div>
-                    <div class="flex gap-[10px]">
-                      <img
-                        src="./src/images2/images3/mosha/Frame 1430102808.png"
-                        alt=""
-                      />
-                      <div class="font-yekan">
-                        <p class="text-gray-700">سیستم PRE-SAFE Brake </p>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="py-5 px-2 flex gap-[120px] items-center">
-                    <div class="flex gap-[10px]">
-                      <img
-                        src="./src/images2/images3/mosha/Frame 1430102808.png"
-                        alt=""
-                      />
-                      <div class="font-yekan">
-                        <p class="text-gray-700">گرمکن صندلی</p>
-                      </div>
-                    </div>
-                    <div class="flex gap-[10px]">
-                      <img
-                        src="./src/images2/images3/mosha/Frame 1430102808.png"
-                        alt=""
-                      />
-                      <div class="font-yekan">
-                        <p class="text-gray-700">گیربکس 7 سرعته اتوماتیک</p>
-                      </div>
-                    </div>
-                    <div class="flex gap-[10px]">
-                      <img
-                        src="./src/images2/images3/mosha/Frame 1430102808.png"
-                        alt=""
-                      />
-                      <div class="font-yekan">
-                        <p class="text-gray-700">سیستم PRE-SAFE Brake </p>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <!-- ردیف اول -->
+            <div class="flex justify-between gap-6 mb-6">
+              <div class="flex items-center gap-3 w-[32%] min-w-[110px]">
+                <img
+                  src="./src/images2/images3/mosha/Frame 1430102808.png"
+                  class="w-6 h-6 md:w-8 md:h-8"
+                />
+                <div>
+                  <p
+                    class="text-gray-700 font-yekan md:text-[14px] text-[11px]"
+                  >
+                    گرمکن صندلی
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 w-[32%] min-w-[110px]">
+                <img
+                  src=" ./src/images2/images3/mosha/Frame 1430102808.png"
+                  class="w-6 h-6 md:w-8 md:h-8"
+                />
+                <div>
+                  <p
+                    class="text-gray-700 font-yekan md:text-[14px] text-[11px]"
+                  >
+                    گیربکس 7 سرعته اتوماتیک
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 w-[32%] min-w-[110px]">
+                <img
+                  src=" ./src/images2/images3/mosha/Frame 1430102808.png"
+                  class="w-6 h-6 md:w-8 md:h-8"
+                />
+                <div>
+                  <p
+                    class="text-gray-700 font-yekan md:text-[14px] text-[11px]"
+                  >
+                    سیستم PRE-SAFE Brake
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ردیف دوم -->
+            <div class="flex justify-between gap-6 mb-6">
+              <div class="flex items-center gap-3 w-[32%] min-w-[110px]">
+                <img
+                  src="./src/images2/images3/mosha/Frame 1430102808.png"
+                  class="w-6 h-6 md:w-8 md:h-8"
+                />
+                <div>
+                  <p
+                    class="text-gray-700 font-yekan md:text-[14px] text-[11px]"
+                  >
+                    گرمکن صندلی
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 w-[32%] min-w-[110px]">
+                <img
+                  src=" ./src/images2/images3/mosha/Frame 1430102808.png"
+                  class="w-6 h-6 md:w-8 md:h-8"
+                />
+                <div>
+                  <p
+                    class="text-gray-700 font-yekan md:text-[14px] text-[11px]"
+                  >
+                    گیربکس 7 سرعته اتوماتیک
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 w-[32%] min-w-[110px]">
+                <img
+                  src=" ./src/images2/images3/mosha/Frame 1430102808.png"
+                  class="w-6 h-6 md:w-8 md:h-8"
+                />
+                <div>
+                  <p
+                    class="text-gray-700 font-yekan md:text-[14px] text-[11px]"
+                  >
+                    سیستم PRE-SAFE Brake
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="w-[700px] h-[380px] bg-white rounded-[10px] mb-[10px]">
+
+          <div class="w-full max-w-[700px] h-auto bg-white rounded-[10px] mb-4">
             <div
-              class="right font-yekan text-[24px] font-bold pt-[20px] pr-[20px] pb-[15px]"
+              class="text-right font-yekan text-xl md:text-2xl font-bold pt-5 pr-5 pb-4"
             >
               <p>درباره خودرو</p>
             </div>
             <div class="bord flex mr-[20px]">
-              <div class="y border-b border-b-amber-500 w-[40px]"></div>
-              <div class="g border-b border-b-gray-300 w-[620px]"></div>
+              <div class="y border-b border-b-amber-500 w-[80px]"></div>
+              <div class="g border-b border-b-gray-300 w-[580px]"></div>
             </div>
-            <h1
-              class="font-yekan text-[20px] pt-[20px] pr-[20px] pb-[15px] font-bold"
-            >
+
+            <h1 class="font-yekan text-lg md:text-xl pt-5 pr-5 pb-4 font-bold">
               اجاره خودرو بنز S500
             </h1>
-            <p
-              class="font-yekan text-[16px] pt-[10px] pr-[20px] pb-[15px] pl-[20px]"
-            >
-              اجاره خودرو بنز S500،  یک خودرو لوکس فول سایز و پرچم‌دار خودروهای
+            <p class="font-yekan text-sm pt-2.5 pr-5 pb-4 px-5">
+              اجاره خودرو بنز S500، یک خودرو لوکس فول سایز و پرچم‌دار خودروهای
               سواری مرسدس بنز است. نسل اول S کلاس در سال 1972 معرفی شد. هر چند
               در سال های پیش از آن هم، کمپانی آلمانی مرسدس بنز، خودرو لوکس دیگری
               را در سبد محصولات خود با نام دیگری داشت. این نسل از S کلاس در
-              نمایشگاه خودرو دیترویت 2006 به معرض دید عموم درآمد  ر حال حاضر نیز
-              مدل های از این خودرو در اختیار مجموعه اتورنت می‌باشد. سیستم تعلیق
-              تمام الکترونیکی که در پی آن ناهمواری های جاده به فراموشی سپرده می
-              شود از ویژگی‌های منحصر به فرد این خودروست. به همین دلیل یک خودروی
-              بسیار مناسب برای مسافرت های خارج از شهر می باشد و به دلیل زیبایی
-              این خودرو جز خودروهای تشریفاتی نیز به حساب می آید.
+              نمایشگاه خودرو دیترویت 2006 به معرض دید عموم درآمد. در حال حاضر
+              نیز مدل های از این خودرو در اختیار مجموعه اتورنت می‌باشد. سیستم
+              تعلیق تمام الکترونیکی که در پی آن ناهمواری های جاده به فراموشی
+              سپرده می شود از ویژگی‌های منحصر به فرد این خودروست. به همین دلیل
+              یک خودروی بسیار مناسب برای مسافرت های خارج از شهر می باشد و به
+              دلیل زیبایی این خودرو جز خودروهای تشریفاتی نیز به حساب می آید.
             </p>
           </div>
-          <div class="w-[700px] h-[275px] bg-white rounded-[10px] mb-[10px]">
+
+          <div
+            class="w-full max-w-[700px] h-[260px] bg-white rounded-[10px] mb-4"
+          >
             <div
-              class="right font-yekan text-[24px] font-bold pt-[10px] pr-[20px] pb-[15px]"
+              class="text-right font-yekan text-xl md:text-2xl font-bold pt-3 pr-5 pb-4"
             >
               <p>نظرات</p>
             </div>
             <div class="bord flex mr-[20px]">
-              <div class="y border-b border-b-amber-500 w-[40px]"></div>
-              <div class="g border-b border-b-gray-300 w-[620px]"></div>
+              <div class="y border-b border-b-amber-500 w-[60px]"></div>
+              <div class="g border-b border-b-gray-300 w-[600px]"></div>
             </div>
             <div
-              class="font-yekan text-[16px] mt-[30px] mr-[25px] pb-[15px] ml-[20px] border border-gray-400 w-[650px] h-[150px] rounded-[10px]"
+              class="font-yekan text-[12px] md:text-[16px] mt-[30px] mr-[25px] pb-[15px] ml-[20px] md:border md:border-gray-400 md:w-[650px] md:h-[150px] rounded-[10px] border-gray-400 border"
             >
               <div class="flex justify-between">
                 <div class="right pt-[20px] pr-[20px]">
@@ -628,7 +749,9 @@
         </div>
 
         <!--#region center-top-1-left-->
-        <div class="center-top-1-left flex flex-col w-[500px] h-[750px]">
+        <div
+          class="center-top-1-left md:flex md:flex-col md:w-[500px] md:h-[750px]"
+        >
           <div class="w-[500px] h-[700px] bg-white rounded-[10px] mb-[10px]">
             <div class="flex gap-[10px] mr-[20px] pt-[10px] pb-[10px]">
               <div
@@ -672,17 +795,17 @@
             >
               <div class="flex gap-[20px]">
                 <p
-                  class="bg-[#194BF0] w-[135px] h-[40px]  flex justify-center items-center rounded-[20px] border border-b-slate-700 text-amber-50 cursor-pointer"
+                  class="bg-[#194BF0] w-[135px] h-[40px] flex justify-center items-center rounded-[20px] border border-b-slate-700 text-amber-50 cursor-pointer"
                 >
                   اجاره خودرو با راننده
                 </p>
                 <p
-                  class="w-[135px] h-[40px]   flex justify-center items-center rounded-[20px] border border-b-slate-600 text-gray-900 cursor-pointer"
+                  class="w-[135px] h-[40px] flex justify-center items-center rounded-[20px] border border-b-slate-600 text-gray-900 cursor-pointer"
                 >
                   اجاره خودرو بی راننده
                 </p>
                 <p
-                  class="w-[135px] h-[40px]  flex justify-center items-center rounded-[20px] border border-b-slate-600 text-gray-900 cursor-pointer"
+                  class="w-[135px] h-[40px] flex justify-center items-center rounded-[20px] border border-b-slate-600 text-gray-900 cursor-pointer"
                 >
                   اجاره ماشین عروس
                 </p>
@@ -860,190 +983,183 @@
         </div>
         <!-- #endregion -->
       </div>
-      <div class="font-yekan text-[18px] flex h-[90px] justify-between">
-        <p class="pr-[70px]">خودروهایی که شاید دوست داشته باشید</p>
-        <p class="text-blue-800 pl-[70px]">مشاهده بیشتر</p>
+      <div class="font-yekan text-[14px] md:text-[18px] flex h-[90px] justify-between mt-[20px]">
+        <p class="md:pr-[70px] pr-[10px]">خودروهایی که شاید دوست داشته باشید</p>
+        <p class="text-blue-800 md:pl-[70px] pl-[30px]">مشاهده بیشتر</p>
       </div>
-      <div class="w-full pr-[150px]">
-        <div class="w-[1300px] flex justify-between gap-[24px] pr-[70px]">
-          <div
-            class="w-1/3 h-[600px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px]"
-          >
+      <div class="w-[90%]  md:flex justify-between gap-[24px] my-[30px] mr-[15px] md:mr-[70px]">
+        <div
+          class="md:w-1/3 md:h-[630px] w-[100%] h-[640px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px] mb-[30px]"
+        >
+          <div class="w-full">
+            <img src="./src/images/cars/car1.png" class="w-full" alt="" />
             <div class="w-full">
-              <img src="./src/images/cars/car1.png" class="w-full" alt="" />
-              <div class="w-full">
-                <h3
-                  class="font-yekan font-bold text-[16px] my-[10px] text-[#2b2b2b]"
-                >
-                  سدان E350 اجاره بنز
-                </h3>
-                <span class="font-yekan text-[13px] text-gray-600"
-                  >مدل 2016</span
-                >
-              </div>
-            </div>
-            <div
-              class="w-full bg-[#f3f3f3] p-[6px] mt-[10px] rounded-[8px] mb-[10px]"
-            >
-              <div class="flex justify-between">
-                <div class="flex gap-x-[6px]">
-                  <span class="font-yekan text-[14px] text-gray-700"
-                    >از 1 تا 30 روز:</span
-                  >
-                  <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
-                    8,500,000
-                  </h3>
-                </div>
-                <span class="font-yekan text-[12px] text-gray-700">روزانه</span>
-              </div>
-            </div>
-            <div class="w-full bg-[#f3f3f3] p-[8px] rounded-[8px] mb-[10px]">
-              <div class="flex justify-between">
-                <div class="flex gap-x-[6px]">
-                  <span class="font-yekan text-[14px] text-gray-700"
-                    >از 1 تا 30 روز:</span
-                  >
-                  <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
-                    9,000,000
-                  </h3>
-                </div>
-                <span class="font-yekan text-[12px] text-gray-700">ماهانه</span>
-              </div>
-            </div>
-
-            <div class="w-full flex justify-between p-[10px]">
-              <span class="font-yekan text-gray-600">مبلغ ضمانت:</span>
-              <h4 class="font-yekan text-gray-800">80 میلیون تومان</h4>
-            </div>
-            <div class="w-full">
-              <a
-                href="#"
-                class="block btn btn-primary btn-sm font-yekan text-[16px]"
-                >درخواست رزرو</a
+              <h3
+                class="font-yekan font-bold text-[16px] my-[10px] text-[#2b2b2b]"
               >
+                سدان E350 اجاره بنز
+              </h3>
+              <span class="font-yekan text-[13px] text-gray-600">مدل 2016</span>
             </div>
           </div>
           <div
-            class="w-1/3 h-[600px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px]"
+            class="w-full bg-[#f3f3f3] p-[6px] mt-[10px] rounded-[8px] mb-[10px]"
           >
-            <div class="w-full">
-              <img src="./src/images/cars/car2.png" class="w-full" alt="" />
-              <div class="w-full">
-                <h3
-                  class="font-yekan font-bold text-[16px] my-[10px] text-[#2b2b2b]"
+            <div class="flex justify-between">
+              <div class="flex gap-x-[6px]">
+                <span class="font-yekan text-[14px] text-gray-700"
+                  >از 1 تا 30 روز:</span
                 >
-                  سدان E350 اجاره بنز
+                <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
+                  8,500,000
                 </h3>
-                <span class="font-yekan text-[13px] text-gray-600"
-                  >مدل 2016</span
+              </div>
+              <span class="font-yekan text-[12px] text-gray-700">روزانه</span>
+            </div>
+          </div>
+          <div class="w-full bg-[#f3f3f3] p-[8px] rounded-[8px] mb-[10px]">
+            <div class="flex justify-between">
+              <div class="flex gap-x-[6px]">
+                <span class="font-yekan text-[14px] text-gray-700"
+                  >از 1 تا 30 روز:</span
                 >
+                <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
+                  9,000,000
+                </h3>
               </div>
+              <span class="font-yekan text-[12px] text-gray-700">ماهانه</span>
             </div>
-            <div
-              class="w-full bg-[#f3f3f3] p-[6px] mt-[10px] rounded-[8px] mb-[10px]"
-            >
-              <div class="flex justify-between">
-                <div class="flex gap-x-[6px]">
-                  <span class="font-yekan text-[14px] text-gray-700"
-                    >از 1 تا 30 روز:</span
-                  >
-                  <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
-                    8,500,000
-                  </h3>
-                </div>
-                <span class="font-yekan text-[12px] text-gray-700">روزانه</span>
-              </div>
-            </div>
-            <div class="w-full bg-[#f3f3f3] p-[8px] rounded-[8px] mb-[10px]">
-              <div class="flex justify-between">
-                <div class="flex gap-x-[6px]">
-                  <span class="font-yekan text-[14px] text-gray-700"
-                    >از 1 تا 30 روز:</span
-                  >
-                  <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
-                    9,000,000
-                  </h3>
-                </div>
-                <span class="font-yekan text-[12px] text-gray-700">ماهانه</span>
-              </div>
-            </div>
+          </div>
 
-            <div class="w-full flex justify-between p-[10px]">
-              <span class="font-yekan text-gray-600">مبلغ ضمانت:</span>
-              <h4 class="font-yekan text-gray-800">80 میلیون تومان</h4>
-            </div>
+          <div class="w-full flex justify-between p-[10px]">
+            <span class="font-yekan text-gray-600">مبلغ ضمانت:</span>
+            <h4 class="font-yekan text-gray-800">80 میلیون تومان</h4>
+          </div>
+          <div class="w-full">
+            <a
+              href="#"
+              class="block btn btn-primary btn-sm font-yekan text-[16px]"
+              >درخواست رزرو</a
+            >
+          </div>
+        </div>
+        <div
+          class="md:w-1/3 md:h-[630px] w-[100%] h-[640px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px] mb-[30px]"
+        >
+          <div class="w-full">
+            <img src="./src/images/cars/car2.png" class="w-full" alt="" />
             <div class="w-full">
-              <a
-                href="#"
-                class="block btn btn-primary btn-sm font-yekan text-[16px]"
-                >درخواست رزرو</a
+              <h3
+                class="font-yekan font-bold text-[16px] my-[10px] text-[#2b2b2b]"
               >
+                سدان E350 اجاره بنز
+              </h3>
+              <span class="font-yekan text-[13px] text-gray-600">مدل 2016</span>
             </div>
           </div>
           <div
-            class="w-1/3 h-[600px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px]"
+            class="w-full bg-[#f3f3f3] p-[6px] mt-[10px] rounded-[8px] mb-[10px]"
           >
-            <div class="w-full">
-              <img src="./src/images/cars/car1.png" class="w-full" alt="" />
-              <div class="w-full">
-                <h3
-                  class="font-yekan font-bold text-[16px] my-[10px] text-[#2b2b2b]"
+            <div class="flex justify-between">
+              <div class="flex gap-x-[6px]">
+                <span class="font-yekan text-[14px] text-gray-700"
+                  >از 1 تا 30 روز:</span
                 >
-                  سدان E350 اجاره بنز
+                <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
+                  8,500,000
                 </h3>
-                <span class="font-yekan text-[13px] text-gray-600"
-                  >مدل 2016</span
+              </div>
+              <span class="font-yekan text-[12px] text-gray-700">روزانه</span>
+            </div>
+          </div>
+          <div class="w-full bg-[#f3f3f3] p-[8px] rounded-[8px] mb-[10px]">
+            <div class="flex justify-between">
+              <div class="flex gap-x-[6px]">
+                <span class="font-yekan text-[14px] text-gray-700"
+                  >از 1 تا 30 روز:</span
                 >
+                <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
+                  9,000,000
+                </h3>
               </div>
+              <span class="font-yekan text-[12px] text-gray-700">ماهانه</span>
             </div>
-            <div
-              class="w-full bg-[#f3f3f3] p-[6px] mt-[10px] rounded-[8px] mb-[10px]"
-            >
-              <div class="flex justify-between">
-                <div class="flex gap-x-[6px]">
-                  <span class="font-yekan text-[14px] text-gray-700"
-                    >از 1 تا 30 روز:</span
-                  >
-                  <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
-                    8,500,000
-                  </h3>
-                </div>
-                <span class="font-yekan text-[12px] text-gray-700">روزانه</span>
-              </div>
-            </div>
-            <div class="w-full bg-[#f3f3f3] p-[8px] rounded-[8px] mb-[10px]">
-              <div class="flex justify-between">
-                <div class="flex gap-x-[6px]">
-                  <span class="font-yekan text-[14px] text-gray-700"
-                    >از 1 تا 30 روز:</span
-                  >
-                  <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
-                    9,000,000
-                  </h3>
-                </div>
-                <span class="font-yekan text-[12px] text-gray-700">ماهانه</span>
-              </div>
-            </div>
+          </div>
 
-            <div class="w-full flex justify-between p-[10px]">
-              <span class="font-yekan text-gray-600">مبلغ ضمانت:</span>
-              <h4 class="font-yekan text-gray-800">80 میلیون تومان</h4>
-            </div>
+          <div class="w-full flex justify-between p-[10px]">
+            <span class="font-yekan text-gray-600">مبلغ ضمانت:</span>
+            <h4 class="font-yekan text-gray-800">80 میلیون تومان</h4>
+          </div>
+          <div class="w-full">
+            <a
+              href="#"
+              class="block btn btn-primary btn-sm font-yekan text-[16px]"
+              >درخواست رزرو</a
+            >
+          </div>
+        </div>
+        <div
+          class="md:w-1/3 md:h-[630px] w-[100%] h-[640px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px] mb-[30px]"
+        >
+          <div class="w-full">
+            <img src="./src/images/cars/car1.png" class="w-full" alt="" />
             <div class="w-full">
-              <a
-                href="#"
-                class="block btn btn-primary btn-sm font-yekan text-[16px]"
-                >درخواست رزرو</a
+              <h3
+                class="font-yekan font-bold text-[16px] my-[10px] text-[#2b2b2b]"
               >
+                سدان E350 اجاره بنز
+              </h3>
+              <span class="font-yekan text-[13px] text-gray-600">مدل 2016</span>
             </div>
+          </div>
+          <div
+            class="w-full bg-[#f3f3f3] p-[6px] mt-[10px] rounded-[8px] mb-[10px]"
+          >
+            <div class="flex justify-between">
+              <div class="flex gap-x-[6px]">
+                <span class="font-yekan text-[14px] text-gray-700"
+                  >از 1 تا 30 روز:</span
+                >
+                <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
+                  8,500,000
+                </h3>
+              </div>
+              <span class="font-yekan text-[12px] text-gray-700">روزانه</span>
+            </div>
+          </div>
+          <div class="w-full bg-[#f3f3f3] p-[8px] rounded-[8px] mb-[10px]">
+            <div class="flex justify-between">
+              <div class="flex gap-x-[6px]">
+                <span class="font-yekan text-[14px] text-gray-700"
+                  >از 1 تا 30 روز:</span
+                >
+                <h3 class="font-yekan text-[#194bf0] text-[16px] font-bold">
+                  9,000,000
+                </h3>
+              </div>
+              <span class="font-yekan text-[12px] text-gray-700">ماهانه</span>
+            </div>
+          </div>
+
+          <div class="w-full flex justify-between p-[10px]">
+            <span class="font-yekan text-gray-600">مبلغ ضمانت:</span>
+            <h4 class="font-yekan text-gray-800">80 میلیون تومان</h4>
+          </div>
+          <div class="w-full">
+            <a
+              href="#"
+              class="block btn btn-primary btn-sm font-yekan text-[16px]"
+              >درخواست رزرو</a
+            >
           </div>
         </div>
       </div>
+
       <footer
-        class="bg-[#1E1E1EE5] text-gray-200 py-7 w-[80%] rounded-[20px] h-[430px] mr-[150px] mt-[30px] mb-[10px] font-yekan"
+        class="bg-[#1E1E1EE5] text-gray-200 md:py-7 w-[98%] h-[830px] md:w-[80%] rounded-[20px] md:h-[440px] md:mr-[170px] mt-[30px] mb-[10px] font-yekan"
       >
         <div
-          class="border border-gray-400 rounded-lg p-6 flex items-center w-[85%] mr-[90px] mb-[30px] justify-between"
+          class="md:border md:border-gray-400 rounded-lg p-6 flex items-center md:w-[85%] md:mr-[90px] mb-[30px] justify-between w-[95%] mr-[15px] gap-5 border-b border-b-zinc-300"
         >
           <tr>
             <td class="py-5 px-2 flex gap-[120px] items-center">
@@ -1140,6 +1256,24 @@
     <!-- #endregion -->
     <script src="./swiper/swiper-bundle.min.js"></script>
     <script src="./src/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const toggleBtn = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const headerText = document.getElementById("header-text");
+
+      toggleBtn.addEventListener("click", () => {
+        const isMenuHidden = mobileMenu.classList.contains("hidden");
+
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+
+        if (isMenuHidden) {
+          headerText.classList.add("hidden");
+        } else {
+          headerText.classList.remove("hidden");
+        }
+      });
+    </script>
     <script>
       var swiper = new Swiper(".mySwiper", {
         spaceBetween: 5,
