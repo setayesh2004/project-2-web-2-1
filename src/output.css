@@ -1833,6 +1833,11 @@
   .z-50 {
     z-index: 50;
   }
+  .drawer-content {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    min-width: calc(0.25rem * 0);
+  }
   .container {
     width: 100%;
     @media (width >= 340px) {
@@ -2506,6 +2511,9 @@
   .w-\[0px\] {
     width: 0px;
   }
+  .w-\[4\] {
+    width: 4;
+  }
   .w-\[9\] {
     width: 9;
   }
@@ -2523,6 +2531,12 @@
   }
   .w-\[40px\] {
     width: 40px;
+  }
+  .w-\[45\] {
+    width: 45;
+  }
+  .w-\[46px\] {
+    width: 46px;
   }
   .w-\[48\%\] {
     width: 48%;
@@ -2632,8 +2646,14 @@
   .w-\[430px\] {
     width: 430px;
   }
+  .w-\[440px\] {
+    width: 440px;
+  }
   .w-\[450px\] {
     width: 450px;
+  }
+  .w-\[460px\] {
+    width: 460px;
   }
   .w-\[480px\] {
     width: 480px;
@@ -2680,11 +2700,20 @@
   .max-w-5xl {
     max-width: var(--container-5xl);
   }
+  .max-w-\[00px\] {
+    max-width: 00px;
+  }
+  .max-w-\[600px\] {
+    max-width: 600px;
+  }
   .max-w-\[650px\] {
     max-width: 650px;
   }
   .max-w-\[700px\] {
     max-width: 700px;
+  }
+  .max-w-\[800px\] {
+    max-width: 800px;
   }
   .max-w-md {
     max-width: var(--container-md);
@@ -3490,6 +3519,10 @@
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
   }
+  .ease-out {
+    --tw-ease: var(--ease-out);
+    transition-timing-function: var(--ease-out);
+  }
   .btn-outline {
     &:not( .btn-active, :hover, :active:focus, :focus-visible, :disabled, [disabled], .btn-disabled, :checked ) {
       --btn-shadow: "";
@@ -3571,6 +3604,11 @@
       margin-right: 0px;
     }
   }
+  .md\:mr-\[10px\] {
+    @media (width >= 48rem) {
+      margin-right: 10px;
+    }
+  }
   .md\:mr-\[20px\] {
     @media (width >= 48rem) {
       margin-right: 20px;
@@ -3601,6 +3639,16 @@
       margin-right: 100px;
     }
   }
+  .md\:mr-\[130px\] {
+    @media (width >= 48rem) {
+      margin-right: 130px;
+    }
+  }
+  .md\:mr-\[150px\] {
+    @media (width >= 48rem) {
+      margin-right: 150px;
+    }
+  }
   .md\:mr-\[170px\] {
     @media (width >= 48rem) {
       margin-right: 170px;
@@ -3609,6 +3657,16 @@
   .md\:mb-0 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:ml-\[10px\] {
+    @media (width >= 48rem) {
+      margin-left: 10px;
+    }
+  }
+  .md\:ml-\[20px\] {
+    @media (width >= 48rem) {
+      margin-left: 20px;
     }
   }
   .md\:ml-\[88px\] {
