@@ -5,159 +5,224 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body class="bg-[#f3f3f3]">
     <!-- #region wrapper-->
-    <div class="wrapper w-full">
+    <div class="wrapper w-full font-yekan">
       <!-- #region header-->
       <div
-        class="header w-full h-[540px] bg-[#2b2b2b] bg-[url(./images2/header/1.png)] bg-center relative"
+        class="header w-full h-[450px] md:h-[540px] bg-cover bg-[#2b2b2b] bg-[url(./images2/header/1.png)] bg-center relative"
       >
+        <!--#region top-menu-->
         <div
-          class="header-top w-[80%] h-[160px] bg-white mx-auto rounded-b-[16px] flex items-center justify-between px-[32px]"
+          class="w-[90%] md:w-[80%] mx-auto bg-white rounded-b-[16px] p-4 flex flex-col md:flex-row justify-between items-center relative z-40 h-[120px]"
         >
-          <div class="right">
-            <img src="./src/images/header/Logo copy.png" alt="" />
+          <div class="logo">
+            <img
+              src="./src/images/header/Logo copy.png"
+              class="mb-4 md:mb-0 w-[100px] md:w-[150px]"
+            />
           </div>
-          <div class="center w-[600px] h-[35px]">
-            <nav
-              class="w-[inherit] h-[inherit] flex justify-between gap-x-[40px]"
-            >
-              <div>
-                <a
-                  href="index.html"
-                  class="font-yekan text-[18px] text-gray-700"
-                  >رزرو خودرو</a
-                >
-              </div>
-              <div>
-                <a href="asly.html" class="font-yekan text-[18px] text-gray-700"
-                  >خدمات ما</a
-                >
-              </div>
-              <div>
-                <a href="#" class="font-yekan text-[18px] text-gray-700"
-                  >بلاگ</a
-                >
-              </div>
-              <div>
-                <a href="pdp.html" class="font-yekan text-[18px] text-gray-700"
-                  >درباره ما</a
-                >
-              </div>
-              <div>
-                <a href="#" class="font-yekan text-[18px] text-gray-700"
-                  >تماس با ما</a
-                >
-              </div>
-              <div>
-                <a href="#" class="font-yekan text-[18px]"
-                  ><img src="./src/images/header/search.png" alt=""
-                /></a>
-              </div>
-            </nav>
-          </div>
-          <div class="left">
-            <a
-              href="#"
-              class="w-[122px] h-[40px] rounded-[8px] gap-x-[8px] bg-[#194BF0] font-yekan flex justify-center items-center text-white"
-              >ورود / ثبت نام</a
-            >
-          </div>
-        </div>
-        <div
-          class="w-[220px] h-[100px] absolute mt-[65px] translate-[-50%] flex gap-x-[24px] text-[32px] text-amber-400 font-yekan mr-[50px]"
-        >
-          اُتـــو رِنت؛ سریع، آسان و به صرفه
-        </div>
-        <div
-          class="w-[480px] h-[24px] mt-[130px] absolute translate-[-25%] flex gap-x-[24px]"
-        >
-          <div class="text-[18px] text-[#868686] font-yekan mr-[40px]">
-            سرویس دهنده رزرو خودرو در ایران در کمترین زمان ممکن!
-          </div>
-        </div>
-        <div class="mb-[60px]">
-          <button
-            class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-amber-400 text-gray-900 text-[16px] font-yekan mt-[190px] mx-[100px] w-[196px] h-[48px] mr-[160px]"
+          <nav
+            class="hidden md:flex gap-x-8 text-gray-700 text-sm md:text-base"
           >
-            <img src="./src/images2/header/car.png" alt="" />
-            رزرو آسان خودرو
+            <div>
+              <a href="index.html" class="font-yekan text-[18px] text-gray-700"
+                >رزرو خودرو</a
+              >
+            </div>
+            <div>
+              <a href="asly.html" class="font-yekan text-[18px] text-gray-700"
+                >خدمات ما</a
+              >
+            </div>
+            <div>
+              <a href="#" class="font-yekan text-[18px] text-gray-700">بلاگ</a>
+            </div>
+            <div>
+              <a href="pdp.html" class="font-yekan text-[18px] text-gray-700"
+                >درباره ما</a
+              >
+            </div>
+            <div>
+              <a href="#" class="font-yekan text-[18px] text-gray-700"
+                >تماس با ما</a
+              >
+            </div>
+            <div>
+              <a href="#" class="font-yekan text-[18px]"
+                ><img src="./src/images/header/search.png" alt=""
+              /></a>
+            </div>
+          </nav>
+          <a
+            href="#"
+            class="bg-blue-600 text-white px-4 py-2 rounded text-sm md:text-base"
+            >ورود / ثبت‌نام</a
+          >
+          <button id="menu-toggle" class="md:hidden absolute left-4 top-4 z-50">
+            <span
+              class="fa fa-align-justify text-gray-400 text-[20px] bg-gray-200 p-2 rounded-md w-[40px] h-[35px]"
+              id="menu-icon"
+            ></span>
           </button>
+        </div>
+        <!--#region top-menu-mob-->
+        <div
+          id="mobile-menu"
+          class="hidden flex-col bg-white w-[90%] mx-auto mt-3 rounded p-4 text-sm md:hidden z-50"
+        >
+          <a
+            href="#"
+            class="py-2 border-b border-b-gray-200 text-shadow-neutral-500"
+            >رزرو خودرو</a
+          >
+          <a
+            href="#"
+            class="py-2 border-b border-b-gray-200 text-shadow-neutral-500"
+            >خدمات ما</a
+          >
+          <a
+            href="#"
+            class="py-2 border-b border-b-gray-200 text-shadow-neutral-500"
+            >بلاگ</a
+          >
+          <a
+            href="#"
+            class="py-2 border-b border-b-gray-200 text-shadow-neutral-500"
+            >درباره ما</a
+          >
+          <a href="#" class="py-2">تماس با ما</a>
+        </div>
 
-          <button
-            class="btn btn-outline mt-[190px] text-[16px] text-amber-100 w-[151px] h-[48px]"
+        <!--#endregion menu-->
+
+        <div class="" id="header-text">
+          <div
+            class="w-[220px] h-[100px] absolute mt-[65px] translate-[-50%] flex gap-x-[24px] md:text-[32px] text-[24px] text-amber-400 font-yekan md:mr-[50px] mr-[77px]"
+            id="header-text"
           >
-            تماس با ما
-            <img src="./src/images2/header/arrow-left.png" alt="" />
-          </button>
+            اُتـــو رِنت؛ سریع، آسان و به صرفه
+          </div>
+          <div
+            class="w-[480px] h-[24px] md:mt-[130px] mt-[110px] absolute translate-[-25%] flex gap-x-[24px]"
+          >
+            <div
+              class="md:text-[18px] text-[14px] text-[#868686] font-yekan md:mr-[40px]"
+            >
+              سرویس دهنده رزرو خودرو در ایران در کمترین زمان ممکن!
+            </div>
+          </div>
+          <div class="mb-[60px] mr-[140px]">
+            <button
+              class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-amber-400 text-gray-900 md:text-[16px] font-yekan mt-[190px] md:mx-[90px] md:w-[196px] h-[48px] md:mr-[20px] text-[12px]"
+            >
+              <img src="./src/images2/header/car.png" alt="" />
+              رزرو آسان خودرو
+            </button>
+
+            <button
+              class="btn btn-outline mt-[190px] md:text-[16px] text-amber-100 md:w-[151px] h-[48px] text-[12px]"
+            >
+              تماس با ما
+              <img src="./src/images2/header/arrow-left.png" alt="" />
+            </button>
+          </div>
         </div>
         <div
-          class="header-bottom w-[90%] h-[250px] bg-white mx-auto rounded-[16px] justify-between px-[34px] py-[30px] border border-accent-content"
+          class="header-bottom w-[90%] md:h-[250px] h-[420px] bg-white mx-auto rounded-[16px] justify-between md:px-[34px] md:py-[30px] py-[20px] border border-accent-content"
         >
           <div
-            class="header-bottom-top w-full h-[50px] mb-[20px] flex gap-[20px] justify-between pr-[20px] font-yekan"
+            class="header-bottom-top w-full h-[50px] mb-[20px] md:flex md:gap-[20px] gap-[10px] justify-between md:pr-[20px] font-yekan pr-[30px]"
           >
-            <div class="flex gap-[20px]">
+            <div class="flex gap-[30px]">
               <p
-                class="bg-[#194BF0] w-[155px] h-[45px] pr-[5px] pt-[10px] justify-center rounded-[20px] border border-b-slate-700 text-amber-50"
+                class="bg-[#194BF0] md:w-[155px] h-[45px] pr-[8px] md:pt-[10px] pt-[15px] justify-center rounded-[20px] border border-b-slate-700 text-amber-50 md:text-[16px] text-[12px] w-[118px]"
               >
                 اجاره خودرو با راننده
               </p>
               <p
-                class="w-[155px] h-[45px] pr-[5px] pt-[10px] justify-center rounded-[20px] border border-b-slate-600 text-gray-900"
+                class="md:w-[155px] h-[45px] pr-[5px] md:pt-[10px] justify-center rounded-[20px] border border-b-slate-600 text-gray-900 md:text-[16px] text-[12px] w-[118px] pt-[15px]"
               >
                 اجاره خودرو بی راننده
               </p>
               <p
-                class="w-[145px] h-[45px] pr-[5px] pt-[10px] justify-center rounded-[20px] border border-b-slate-600 text-gray-900"
+                class="md:w-[145px] h-[45px] pr-[5px] md:pt-[10px] justify-center rounded-[20px] border border-b-slate-600 text-gray-900 md:text-[16px] text-[12px] w-[118px] pt-[15px]"
               >
                 اجاره ماشین عروس
               </p>
             </div>
-
             <div>
               <h3
-                class="w-[300px] h-[45px] pt-[10px] justify-center rounded-[20px] text-[#194BF0]"
+                class="md:w-[350px] w-[500px] h-[45px] pt-[10px] pr-[110px] justify-center rounded-[20px] text-[#194BF0]"
               >
                 اطلاعات بیشتر در مورد رزرو خودرو
               </h3>
             </div>
           </div>
           <div
-            class="header-bottom-cen w-full h-[40px] mb-[10px] flex justify-between"
+            class="header-bottom-cen w-full h-auto mb-2 flex flex-col md:flex-row justify-between px-4"
           >
-            <div class="flex gap-[10px] font-yekan mr-[15px]">
-              <img src="./src/images2/header/aaa.png" class="size-7" alt="" />
-              <p>محل تحویل خودرو</p>
+            <div
+              class="flex gap-2 font-yekan mb-2 md:mb-0 items-center mt-[30px] md:mt-[20px]"
+            >
+              <img
+                src="./src/images2/header/aaa.png"
+                class="size-7 w-7 h-7"
+                alt=""
+              />
+              <p class="text-base md:text-base">محل تحویل خودرو</p>
             </div>
-            <div class="flex gap-[40px] font-yekan mr-[5px]">
-              <div class="gap-[10px] flex">
-                <img src="./src/images2/header/aaa.png" class="size-7" alt="" />
-                <p class="text[14px]">تاریخ تحویل</p>
+            <div
+              class="flex gap-6 font-yekan items-center flex-wrap md:flex-nowrap"
+            >
+              <div class="flex gap-2 items-center whitespace-nowrap">
+                <img
+                  src="./src/images2/header/aaa.png"
+                  class="w-5 md:w-7 h-5 md:h-7"
+                  alt=""
+                />
+                <p class="text-[11px] md:text-[14px]">تاریخ تحویل</p>
               </div>
-              <div class="gap-[10px] flex">
-                <img src="./src/images2/header/aaa.png" class="size-7" alt="" />
-                <p class="text[14px]">تاریخ بازگشت</p>
+              <div class="flex gap-2 items-center whitespace-nowrap">
+                <img
+                  src="./src/images2/header/aaa.png"
+                  class="w-5 md:w-7 h-5 md:h-7"
+                  alt=""
+                />
+                <p class="text-[11px] md:text-[14px]">تاریخ بازگشت</p>
               </div>
-              <div class="gap-[10px] flex">
-                <img src="./src/images2/header/aaa.png" class="size-7" alt="" />
-                <p class="text[14px]">ساعت تحویل</p>
+              <div class="flex gap-2 items-center whitespace-nowrap">
+                <img
+                  src="./src/images2/header/aaa.png"
+                  class="w-5 md:w-7 h-5 md:h-7"
+                  alt=""
+                />
+                <p class="text-[11px] md:text-[14px]">ساعت تحویل</p>
               </div>
-              <div class="gap-[10px] flex">
-                <img src="./src/images2/header/aaa.png" class="size-7" alt="" />
-                <p class="text[14px]">ساعت بازگشت</p>
+              <div class="flex gap-2 items-center whitespace-nowrap">
+                <img
+                  src="./src/images2/header/aaa.png"
+                  class="w-5 md:w-7 h-5 md:h-7"
+                  alt=""
+                />
+                <p class="text-[11px] md:text-[14px]">ساعت بازگشت</p>
               </div>
             </div>
           </div>
+
           <div
-            class="header-bottom-bot w-full h-[60px] mt-[20px] flex justify-between"
+            class="header-bottom-bot w-full min-h-[60px] mt-5 flex flex-col md:flex-row justify-between items-center md:items-start pl-[20px]"
           >
             <div
-              class="right font-yekan flex justify-between pt-[10px] pr-[15px]"
+              class="right font-yekan w-full md:w-auto flex justify-between pt-2 pr-4"
             >
               <select
-                class="select w-full border border-[#9a9a9a] bg-transparent font-yekan text-[16px] text-gray-700"
+                class="select w-full md:w-[300px] border border-[#9a9a9a] bg-transparent font-yekan text-base md:text-lg text-gray-700 p-1"
               >
                 <option disabled selected>تهران-فرودگاه امام خمینی</option>
                 <option>تهران-فرودگاه امام خمینی</option>
@@ -166,36 +231,38 @@
               </select>
             </div>
             <div
-              class="left font-yekan flex pt-[10px] w-[800px] mt-[10px] gap-7"
+              class="left font-yekan flex flex-wrap md:gap-10 gap-8 mt-6 md:mt-4 w-full md:w-auto text-gray-600 justify-center md:justify-start"
             >
-              <div class="flex gap-1 text-gray-600 pr-[400px]">
-                <p>1403٫02٫10</p>
+              <div
+                class="flex gap-1 items-center whitespace-nowrap pr-0 md:pr-[400px]"
+              >
+                <p class="text-sm md:text-base">1403٫02٫10</p>
                 <img
                   src="./src/images2/header/Vector.png"
-                  class="size-5"
+                  class="w-4 h-4 md:w-5 md:h-5"
                   alt=""
                 />
               </div>
-              <div class="flex gap-1 text-gray-600">
-                <p>1403٫02٫10</p>
+              <div class="flex gap-1 items-center whitespace-nowrap">
+                <p class="text-sm md:text-base">1403٫02٫10</p>
                 <img
                   src="./src/images2/header/Vector.png"
-                  class="size-5"
+                  class="w-4 h-4 md:w-5 md:h-5"
                   alt=""
                 />
               </div>
-              <div class="flex gap-1 text-gray-600">
-                <p>1403٫02٫10</p>
+              <div class="flex gap-1 items-center whitespace-nowrap">
+                <p class="text-sm md:text-base">1403٫02٫10</p>
                 <img
                   src="./src/images2/header/Vector.png"
-                  class="size-5"
+                  class="w-4 h-4 md:w-5 md:h-5"
                   alt=""
                 />
               </div>
             </div>
             <img
               src="./src/images2/header/Frame 427320815.png"
-              class="h-[100%] w-[60px]"
+              class="h-[60px] w-[60px] mt-8 md:mt-0"
               alt=""
             />
           </div>
@@ -203,28 +270,64 @@
       </div>
       <!-- #endregion -->
       <!-- #region eshteb-->
-      <div class="brand w-full h-[200px]"></div>
+      <div class="brand w-full md:h-[200px] h-[450px]"></div>
       <!-- #endregion -->
       <!-- #region brands-->
-      <div class="brand w-[98%] h-[100px] flex gap-[20px] mr-[10px]">
-        <img src="./src/images2/brands/Marcedes.png" class="opacity-10" />
-        <img src="./src/images2/brands/Nissan (1).png" class="opacity-10" />
-        <img src="./src/images2/brands/lexus-logo.png" class="opacity-10" />
-        <img src="./src/images2/brands/Marcedes.png" class="opacity-10" />
-        <img src="./src/images2/brands/Nissan (1).png" class="opacity-10" />
-        <img src="./src/images2/brands/lexus-logo.png" class="opacity-10" />
-        <img src="./src/images2/brands/Marcedes.png" class="opacity-10" />
-        <img src="./src/images2/brands/Nissan (1).png" class="opacity-10" />
-        <img src="./src/images2/brands/lexus-logo.png" class="opacity-10" />
-        <img src="./src/images2/brands/Marcedes.png" class="opacity-10" />
-        <img src="./src/images2/brands/Nissan (1).png" class="opacity-10" />
-        <img src="./src/images2/brands/lexus-logo.png" class="opacity-10" />
+      <div
+        class="brand w-[98%] h-[100px] flex flex-wrap gap-5 mr-2.5 justify-center items-center"
+      >
+        <img
+          src="./src/images2/brands/Marcedes.png"
+          class="opacity-10 w-20 md:w-26"
+        />
+        <img
+          src="./src/images2/brands/Nissan (1).png"
+          class="opacity-10 w-20 md:w-26"
+        />
+        <img
+          src="./src/images2/brands/lexus-logo.png"
+          class="opacity-10 w-20 md:w-26"
+        />
+        <img
+          src="./src/images2/brands/Marcedes.png"
+          class="opacity-10 w-20 md:w-26"
+        />
+        <img
+          src="./src/images2/brands/Nissan (1).png"
+          class="opacity-10 w-20 md:w-26"
+        />
+        <img
+          src="./src/images2/brands/lexus-logo.png"
+          class="opacity-10 w-20 md:w-26"
+        />
+        <img
+          src="./src/images2/brands/Marcedes.png"
+          class="opacity-10 w-20 md:w-26"
+        />
+        <img
+          src="./src/images2/brands/Nissan (1).png"
+          class="opacity-10 w-20 md:w-26"
+        />
+        <img
+          src="./src/images2/brands/lexus-logo.png"
+          class="opacity-10 w-20 md:w-26"
+        />
+        <img
+          src="./src/images2/brands/Marcedes.png"
+          class="opacity-10 w-20 md:w-26"
+        />
+        <img
+          src="./src/images2/brands/Nissan (1).png"
+          class="opacity-10 w-20 md:w-26"
+        />
       </div>
+
       <!-- #endregion -->
       <!-- #region what-->
-      <div class="w-full mt-[20px]">
+
+      <div class="w-full mt-[100px]">
         <div
-          class="w-[75%] h-[290px] bg-[#2b2b2b] bg-[url(./images2/what/1.png)] relative mr-[200px] rounded-[16px]"
+          class="md:w-[75%] w-[97%] md:h-[290px] h-[300px] bg-[#2b2b2b] bg-[url(./images2/what/1.png)] relative md:mr-[200px] rounded-[16px] mr-[10px]"
         >
           <div
             class="w-[190px] h-[30px] absolute left-[50%] top-[23%] translate-[-50%] flex gap-x-[24px] text-[28px] text-amber-400 font-yekan"
@@ -232,9 +335,11 @@
             چــــــرا اُتو رِنت؟
           </div>
           <div
-            class="w-[860px] h-[100px] absolute left-[50%] top-[60%] translate-[-50%] flex gap-x-[24px]"
+            class="md:w-[860px] w-[400px] h-[100px] absolute left-[50%] top-[60%] translate-[-50%] flex gap-x-[24px]"
           >
-            <div class="w-full h-[90%] text-[18px] text-[#d9d9d9] font-yekan">
+            <div
+              class="md:w-full h-[90%] md:text-[18px] text-[13px] text-[#d9d9d9] font-yekan"
+            >
               اجاره خودرو از یک شرکت اجاره خودرو با سابقه به شما کمک می‌کند تا
               در مسافرت ها، قرار ملاقات‌ های مهم، مجالس و مراسم‌های خانوادگی
               ماشین مناسب خود را در اختیار داشته باشید. اگر شما اصلا خودرویی در
@@ -243,132 +348,196 @@
             </div>
           </div>
           <div
-            class="w-[80%] h-[250px] mx-auto justify-between px-[34px] py-[30px] flex gap-[30px]"
+            class="w-[80%] md:h-[250px] h-[270px] mx-auto justify-between md:px-[34px] md:py-[30px] py-[60px] flex gap-[30px]"
           >
             <div
-              class="bg-white w-[300px] h-[90%] rounded-[16px] mt-[190px] font-yekan"
+              class="bg-white w-[300px] md:h-[90%] h-[100%] rounded-[16px] mt-[190px] font-yekan"
             >
               <img
                 src="./src/images2/what/box.png"
-                class="pr-[130px] pt-[10px]"
+                class="md:pr-[100px] pr-[35px] pt-[10px]"
                 alt=""
               />
-              <p class="pr-[100px] pt-[10px]">تحویل در محل</p>
-              <p class="pr-[20px] pt-[20px] text-zinc-700 text-[12px]">
+              <p
+                class="md:pr-[75px] pr-[20px] pt-[10px] md:text-[16px] text-[13px]"
+              >
+                تحویل در محل
+              </p>
+              <p
+                class="md:pr-[10px] pr-[8px] md:pt-[20px] text-zinc-700 md:text-[11px] text-[10px] pt-[10px]"
+              >
                 تحویل خودرو در زمان و مکان توسط شما خواهد بود.
               </p>
             </div>
             <div
-              class="bg-white w-[300px] h-[90%] rounded-[16px] mt-[190px] font-yekan"
+              class="bg-white w-[300px] md:h-[90%] h-[100%] rounded-[16px] mt-[190px] font-yekan"
             >
               <img
                 src="./src/images2/what/box.png"
-                class="pr-[130px] pt-[10px]"
+                class="md:pr-[100px] pr-[35px] pt-[10px]"
                 alt=""
               />
-              <p class="pr-[100px] pt-[10px]">تحویل در محل</p>
-              <p class="pr-[20px] pt-[20px] text-zinc-700 text-[12px]">
+              <p
+                class="md:pr-[75px] pr-[20px] pt-[10px] md:text-[16px] text-[13px]"
+              >
+                تحویل در محل
+              </p>
+              <p
+                class="md:pr-[10px] pr-[8px] md:pt-[20px] text-zinc-700 md:text-[11px] text-[10px] pt-[10px]"
+              >
                 تحویل خودرو در زمان و مکان توسط شما خواهد بود.
               </p>
             </div>
             <div
-              class="bg-white w-[300px] h-[90%] rounded-[16px] mt-[190px] font-yekan"
+              class="bg-white w-[300px] md:h-[90%] h-[100%] rounded-[16px] mt-[190px] font-yekan"
             >
               <img
                 src="./src/images2/what/box.png"
-                class="pr-[130px] pt-[10px]"
+                class="md:pr-[100px] pr-[35px] pt-[10px]"
                 alt=""
               />
-              <p class="pr-[100px] pt-[10px]">تحویل در محل</p>
-              <p class="pr-[20px] pt-[20px] text-zinc-700 text-[12px]">
+              <p
+                class="md:pr-[75px] pr-[20px] pt-[10px] md:text-[16px] text-[13px]"
+              >
+                تحویل در محل
+              </p>
+              <p
+                class="md:pr-[10px] pr-[8px] md:pt-[20px] text-zinc-700 md:text-[11px] text-[10px] pt-[10px]"
+              >
                 تحویل خودرو در زمان و مکان توسط شما خواهد بود.
               </p>
             </div>
           </div>
         </div>
       </div>
+
       <!-- #endregion -->
       <!-- #region eshteb-->
       <div class="brand w-full h-[150px]"></div>
       <!-- #endregion -->
       <!-- #region carsss-->
-      <div class="brand w-[80%] h-[200px] gap-[20px] flex mr-[165px] " style="margin-right: 175px;">
+      <div
+        class="brand w-full md:w-4/5 h-[200px] flex flex-wrap md:flex-nowrap justify-between items-center md:mx-[80px] px-4 md:gap-[20px] gap-[10px]"
+      >
         <img
           src="./src/images2/carsss/Frame 1430103028.png"
-          class="w-[170px] h-[100px]"
           alt=""
+          class="w-[20%] max-w-[170px] h-auto"
+        />
+
+        <img
+          src="./src/images2/carsss/Frame 1430103028.png"
+          alt=""
+          class="w-[20%] max-w-[170px] h-auto"
         />
         <img
           src="./src/images2/carsss/Frame 1430103028.png"
           alt=""
-          class="w-[170px] h-[100px]"
+          class="w-[20%] max-w-[170px] h-auto"
         />
         <img
           src="./src/images2/carsss/Frame 1430103028.png"
           alt=""
-          class="w-[170px] h-[100px]"
+          class="w-[20%] max-w-[170px] h-auto"
         />
         <img
           src="./src/images2/carsss/Frame 1430103028.png"
           alt=""
-          class="w-[170px] h-[100px]"
+          class="w-[20%] max-w-[170px] h-auto"
         />
         <img
           src="./src/images2/carsss/Frame 1430103028.png"
           alt=""
-          class="w-[170px] h-[100px]"
+          class="w-[20%] max-w-[170px] h-auto"
         />
         <img
           src="./src/images2/carsss/Frame 1430103028.png"
           alt=""
-          class="w-[170px] h-[100px]"
-        />
-        <img
-          src="./src/images2/carsss/Frame 1430103028.png"
-          alt=""
-          class="w-[170px] h-[100px]"
+          class="w-[20%] max-w-[170px] h-auto"
         />
       </div>
+
       <!-- #endregion -->
       <!-- #region text2-->
-      <div class="font-yekan w-ull h-[150px] mr-[550px]">
-        <p class="text-neutral-600 text-[20px] pr-[150px]" style="padding-right: 160px;">
+      <div
+        class="font-yekan w-full max-w-lg mx-auto md:mr-[550px] h-auto md:h-[150px] px-4 md:px-0 mt-[30px]"
+      >
+        <p
+          class="text-neutral-600 text-lg md:text-[20px] pr-[140px] md:pr-[100px]"
+        >
           مشاهده موجودی خودروها
         </p>
-        <div class="flex mt-[20px] gap-[10px] pr-[150px]">
-          <p class="text-neutral-900 text-[25px] font-bold">رزرو خودرو در</p>
-          <p class="text-amber-400 text-[28px] font-bold">اُتـــورِنت</p>
+        <div
+          class="flex flex-wrap mt-5 gap-2 md:gap-[10px] pr-[137px] md:pr-[80px]"
+        >
+          <p
+            class="text-neutral-900 text-xl md:text-[25px] font-bold whitespace-nowrap"
+          >
+            رزرو خودرو در
+          </p>
+          <p
+            class="text-amber-400 text-2xl md:text-[28px] font-bold whitespace-nowrap"
+          >
+            اُتـــورِنت
+          </p>
         </div>
       </div>
-      <div class="flex font-yekan">
-        <div class="right w-[430px] h-[100px] "></div>
+
+      <div class="md:flex font-yekan">
+        <div class="right md:w-[360px] md:h-[100px]"></div>
         <div
-          class="center w-[550px] h-[60px] mr-[150px] font-yekan gap-x-[30px] flex"
+          class="center md:w-[550px] md:h-[60px] h-[50px] md:mr-[150px] font-yekan md:gap-x-[30px] gap-x-[20px] flex mr-[125px] mt-[30px]"
         >
-          <div class="bg-[#194BF0] rounded-[8px] w-[138px] h-[48px]">
-            <p class="text-amber-50 pr-[40px] pt-[10px]">پرطرفدار</p>
+          <div
+            class="bg-[#194BF0] rounded-[8px] md:w-[138px] md:h-[48px] w-[80px]"
+          >
+            <p
+              class="text-amber-50 md:pr-[40px] md:pt-[10px] pr-[11px] pt-[10px]"
+            >
+              پرطرفدار
+            </p>
           </div>
-          <div class="border border-blue-800 rounded-[8px] w-[138px] h-[48px]">
-            <p class="text-[#194BF0] pr-[40px] pt-[10px]">لوکس</p>
+          <div
+            class="border border-blue-800 rounded-[8px] md:w-[138px] md:h-[48px] w-[80px]"
+          >
+            <p
+              class="text-[#194BF0] md:pr-[40px] md:pt-[10px] pr-[14px] pt-[10px]"
+            >
+              لوکس
+            </p>
           </div>
-          <div class="border border-blue-800 rounded-[8px] w-[138px] h-[48px]">
-            <p class="text-[#194BF0] pr-[40px] pt-[10px]">اقتصادی</p>
+          <div
+            class="border border-blue-800 rounded-[8px] md:w-[138px] md:h-[48px] w-[80px]"
+          >
+            <p
+              class="text-[#194BF0] md:pr-[40px] md:pt-[10px] pr-[11px] pt-[10px]"
+            >
+              اقتصادی
+            </p>
           </div>
         </div>
-        <div class="left w-[300px] h-[60px]">
-          <p class="text-[#194BF0] pr-[140px] pt-[10px] text-[18px] font-bold">
+        <div class="left md:w-[300px] md:h-[60px]">
+          <p
+            class="text-[#194BF0] md:pr-[140px] md:pt-[45px] md:text-[18px] font-bold pr-[220px] pt-[20px]"
+          >
             مشاهده همه
           </p>
         </div>
       </div>
+
       <!-- #endregion -->
       <!-- #region listcars-->
-      <div class="top-cars w-full">
+
+      <div class="top-cars w-[70%] mx-auto">
         <div
-          class="w-[70%] flex justify-between gap-[30px] my-[30px] mr-[220px]"
+          class="w-full flex flex-col md:flex-row justify-between gap-y-4 md:gap-x-[20px] mb-[20px] mt-[30px]"
         >
+         
+        </div>
+
+        <div class="w-full md:flex justify-between gap-[24px] my-[30px]">
           <div
-            class="w-1/3 h-[600px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px]"
+            class="md:w-1/3 md:h-[530px] w-[100%] h-[540px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px] mb-[30px]"
           >
             <div class="w-full">
               <img src="./src/images/cars/car1.png" class="w-full" alt="" />
@@ -425,7 +594,7 @@
             </div>
           </div>
           <div
-            class="w-1/3 h-[600px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px]"
+            class="md:w-1/3 md:h-[530px] w-[100%] h-[540px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px] mb-[30px]"
           >
             <div class="w-full">
               <img src="./src/images/cars/car2.png" class="w-full" alt="" />
@@ -482,7 +651,7 @@
             </div>
           </div>
           <div
-            class="w-1/3 h-[600px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px]"
+            class="md:w-1/3 md:h-[530px] w-[100%] h-[540px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px] mb-[30px]"
           >
             <div class="w-full">
               <img src="./src/images/cars/car1.png" class="w-full" alt="" />
@@ -539,9 +708,9 @@
             </div>
           </div>
         </div>
-        <div class="w-[70%] flex justify-between gap-[30px] mr-[220px]">
+        <div class="w-full md:flex justify-between gap-[24px]">
           <div
-            class="w-1/3 h-[600px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px]"
+            class="md:w-1/3 md:h-[530px] w-[100%] h-[540px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px] mb-[30px]"
           >
             <div class="w-full">
               <img src="./src/images/cars/car1.png" class="w-full" alt="" />
@@ -598,7 +767,7 @@
             </div>
           </div>
           <div
-            class="w-1/3 h-[600px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px]"
+            class="md:w-1/3 md:h-[530px] w-[100%] h-[540px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px] mb-[30px]"
           >
             <div class="w-full">
               <img src="./src/images/cars/car2.png" class="w-full" alt="" />
@@ -655,7 +824,7 @@
             </div>
           </div>
           <div
-            class="w-1/3 h-[600px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px]"
+            class="md:w-1/3 md:h-[530px] w-[100%] h-[540px] bg-white rounded-[16px] px-[14px] pt-[16px] pb-[5px] mb-[30px]"
           >
             <div class="w-full">
               <img src="./src/images/cars/car1.png" class="w-full" alt="" />
@@ -713,18 +882,25 @@
           </div>
         </div>
       </div>
+
       <!-- #endregion -->
       <!-- #region text3-->
       <div class="font-yekan w-ull h-[150px] mr-[550px] mt-[20px]">
         <p class="text-neutral-600 text-[20px] pr-[190px]">چگونه در وبسایت</p>
-        <div class="flex mt-[20px] gap-[10px] pr-[110px]" style="padding-right: 120px;">
+        <div
+          class="flex mt-[20px] gap-[10px] pr-[110px]"
+          style="padding-right: 120px"
+        >
           <p class="text-amber-400 text-[28px] font-bold">اُتـــورِنت</p>
           <p class="text-neutral-900 text-[25px] font-bold">خودرو رزرو کنیم؟</p>
         </div>
       </div>
       <!--#endregion-->
       <!-- #region bluecar-->
-      <div class="w-full h-[900px] flex pr-[140px]" style="padding-right: 160px;">
+      <div
+        class="w-full h-[900px] flex pr-[140px]"
+        style="padding-right: 160px"
+      >
         <div class="right w-[30%] h-full">
           <div class="top w-[100%] h-[500px]">
             <div class="one mr-[60px]">
@@ -795,7 +971,10 @@
       </div>
       <!--#endregion-->
       <!--#region text4-->
-      <div class="font-yekan w-ull h-[150px] mr-[470px] mt-[20px] pr-[100px]" style="padding-right: 130px;">
+      <div
+        class="font-yekan w-ull h-[150px] mr-[470px] mt-[20px] pr-[100px]"
+        style="padding-right: 130px"
+      >
         <p class="text-neutral-600 text-[20px] pr-[70px]">
           پر تکرارترین سؤالاتی که پرسیدید
         </p>
@@ -806,7 +985,10 @@
       </div>
       <!--#endregion-->
       <!-- #region question -->
-      <div class="w-[100%] h-[400px] flex gap-x-[50px] pr-[100px]" style="padding-right: 130px;">
+      <div
+        class="w-[100%] h-[400px] flex gap-x-[50px] pr-[100px]"
+        style="padding-right: 130px"
+      >
         <div class="right w-[50%] h-full mr-[150px]">
           <div
             tabindex="0"
@@ -869,7 +1051,10 @@
       </div>
       <!--#endregion-->
       <!--#region text5-->
-      <div class="font-yekan w-ull h-[150px] mr-[470px] mt-[20px] pr-[100px] " style="padding-right: 130px;">
+      <div
+        class="font-yekan w-ull h-[150px] mr-[470px] mt-[20px] pr-[100px]"
+        style="padding-right: 130px"
+      >
         <p class="text-neutral-600 text-[20px] pr-[70px]">
           آنچه مشتریان ما درموردمان گفته‌اند.
         </p>
@@ -880,7 +1065,7 @@
       </div>
       <!--#endregion-->
       <!--#region text-6-->
-      <div class="h-[400px] w-full" style="padding-right: 70px;">
+      <div class="h-[400px] w-full" style="padding-right: 70px">
         <div
           class="h-full w-[70%] bg-white rounded-[10px] border border-slate-400 mr-[200px] pr-[100px]"
         >
@@ -907,7 +1092,10 @@
           </div>
         </div>
       </div>
-      <div class="h-[100px] w-full mt-[20px] pr-[100px]" style="padding-right: 150px;">
+      <div
+        class="h-[100px] w-full mt-[20px] pr-[100px]"
+        style="padding-right: 150px"
+      >
         <div class="h-full w-[70%] mr-[200px] flex gap-[60px]">
           <div class="w-[200px] h-[80px] rounded-[14px] bg-amber-500 flex">
             <img
@@ -963,7 +1151,10 @@
       </div>
       <!--#endregion-->
       <!--#region text5-->
-      <div class="font-yekan w-ull h-[150px] mr-[470px] mt-[20px] pr-[100px] " style="padding-right: 180px;" >
+      <div
+        class="font-yekan w-ull h-[150px] mr-[470px] mt-[20px] pr-[100px]"
+        style="padding-right: 180px"
+      >
         <p class="text-neutral-600 text-[20px] pr-[150px]">مقالات ما</p>
         <div class="flex mt-[20px] gap-[10px] mr-[130px]">
           <p class="text-neutral-900 text-[25px] font-bold">مجله</p>
@@ -975,14 +1166,15 @@
       </div>
       <!--#endregion-->
       <!--#region img-->
-      <div class="h-[350px] w-full pr-[85px]" style="padding-right: 130px;">
+      <div class="h-[350px] w-full pr-[85px]" style="padding-right: 130px">
         <div class="h-full w-[75%] mr-[150px] gap-[30px] flex">
           <div
             class="h-full w-[30%] bg-white border border-zinc-500 rounded-[12px]"
           >
             <img
               src="./src/images2/imgcar/pic.png"
-              class="w-[340px] h-[190px] pr-[15px] pt-[20px]" style="padding-right: 10px;"
+              class="w-[340px] h-[190px] pr-[15px] pt-[20px]"
+              style="padding-right: 10px"
               alt=""
             />
             <h3 class="font-yekan text-[14px] pt-[10px] pr-[15px]">
@@ -1010,7 +1202,8 @@
           >
             <img
               src="./src/images2/imgcar/pic.png"
-              class="w-[340px] h-[190px] pr-[15px] pt-[20px] " style="padding-right: 10px;"
+              class="w-[340px] h-[190px] pr-[15px] pt-[20px]"
+              style="padding-right: 10px"
               alt=""
             />
             <h3 class="font-yekan text-[14px] pt-[10px] pr-[15px]">
@@ -1038,7 +1231,8 @@
           >
             <img
               src="./src/images2/imgcar/pic.png"
-              class="w-[340px] h-[190px] pr-[15px] pt-[20px]" style="padding-right: 10px;"
+              class="w-[340px] h-[190px] pr-[15px] pt-[20px]"
+              style="padding-right: 10px"
               alt=""
             />
             <h3 class="font-yekan text-[14px] pt-[10px] pr-[15px]">
@@ -1165,5 +1359,23 @@
     </div>
 
     <!-- #endregion -->
+    <script>
+      const toggleBtn = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const headerText = document.getElementById("header-text");
+
+      toggleBtn.addEventListener("click", () => {
+        const isMenuHidden = mobileMenu.classList.contains("hidden");
+
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+
+        if (isMenuHidden) {
+          headerText.classList.add("hidden");
+        } else {
+          headerText.classList.remove("hidden");
+        }
+      });
+    </script>
   </body>
 </html>
