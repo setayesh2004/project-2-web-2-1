@@ -3749,6 +3749,11 @@
       width: 36%;
     }
   }
+  .md\:w-\[40px\] {
+    @media (width >= 48rem) {
+      width: 40px;
+    }
+  }
   .md\:w-\[65\%\] {
     @media (width >= 48rem) {
       width: 65%;
@@ -3852,6 +3857,11 @@
   .md\:w-\[360px\] {
     @media (width >= 48rem) {
       width: 360px;
+    }
+  }
+  .md\:w-\[420px\] {
+    @media (width >= 48rem) {
+      width: 420px;
     }
   }
   .md\:w-\[450px\] {
