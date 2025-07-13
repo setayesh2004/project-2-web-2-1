@@ -3864,6 +3864,16 @@
       width: 420px;
     }
   }
+  .md\:w-\[430px\] {
+    @media (width >= 48rem) {
+      width: 430px;
+    }
+  }
+  .md\:w-\[435px\] {
+    @media (width >= 48rem) {
+      width: 435px;
+    }
+  }
   .md\:w-\[450px\] {
     @media (width >= 48rem) {
       width: 450px;
